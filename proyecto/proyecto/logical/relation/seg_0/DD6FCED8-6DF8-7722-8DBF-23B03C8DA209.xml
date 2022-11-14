@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FormatoPelicula Peliculas FK" directorySegmentName="seg_0" id="DD6FCED8-6DF8-7722-8DBF-23B03C8DA209">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:00:31 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>92D29708-A357-EA54-D358-941A982F03DB</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>371B5092-EB28-798A-56DF-F885D62FCC77</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DBE15D84-E8DB-5B35-BF9D-0B55F0EEF77D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

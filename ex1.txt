@@ -1,0 +1,790 @@
+SQL> start 1
+SQL> select IDOFICINA, IDPAIS, CIUDAD, LENGTH(direccion) "# Letras direccion"
+  2  from oficinas
+  3  where NOT LOWER(CIUDAD) LIKE '%a%'
+  4  order by ciudad
+  5  /
+
+ IDOFICINA ID CIUDAD                    # Letras direccion                      
+---------- -- ------------------------- ------------------                      
+      2000 CN Beijing                                   19                      
+      3000 CH Bern                                      17                      
+      3500 HK Hong Kong                                 14                      
+      2400 UK London                                    14                      
+      3200 MX Mexico                                    21                      
+      2700 DE Munich                                    21                      
+      2500 UK Oxford                                    40                      
+      1600 US South Brunswick                           14                      
+      2600 UK Stretford                                 17                      
+      2200 AU Sydney                                    21                      
+      1200 JP Tokyo                                     16                      
+
+ IDOFICINA ID CIUDAD                    # Letras direccion                      
+---------- -- ------------------------- ------------------                      
+      1800 CA Toronto                                   15                      
+      3100 NL Utrecht                                   25                      
+      1100 IT Venice                                    23                      
+      1900 CA Whitehorse                                15                      
+
+15 rows selected.
+
+SQL> start 2
+SQL>  select INITCAP(nombre) || ' ingreso a los ' || trunc(months_between(DIAINGRESO,dianacimiento)/12) || ' annos. Ella es ' ||
+  2  	 case WHEN to_char(dianacimiento,'dd') >= 20 and
+  3  		    to_char(dianacimiento,'mm') = 1 or
+  4  		    to_char(dianacimiento,'dd') <= 18 and
+  5  		    to_char(dianacimiento,'mm') = 2
+  6  	    THEN 'Acuario'
+  7  	    WHEN to_char(dianacimiento,'dd') >= 19 and
+  8  		    to_char(dianacimiento,'mm') = 2 or
+  9  		    to_char(dianacimiento,'dd') <= 20 and
+ 10  		   to_char(dianacimiento,'mm') = 3
+ 11  	   THEN 'Piscis'
+ 12  	   WHEN to_char(dianacimiento,'dd') >= 21 and
+ 13  		   to_char(dianacimiento,'mm') = 3 or
+ 14  		   to_char(dianacimiento,'dd') <= 19 and
+ 15  		   to_char(dianacimiento,'mm') = 4
+ 16  	   THEN 'Aries'
+ 17  	   WHEN to_char(dianacimiento,'dd') >= 20 and
+ 18  		   to_char(dianacimiento,'mm') = 4 or
+ 19  		   to_char(dianacimiento,'dd') <= 20 and
+ 20  		   to_char(dianacimiento,'mm') = 5
+ 21  	   THEN 'Tauro'
+ 22  	   WHEN to_char(dianacimiento,'dd') >= 21 and
+ 23  		   to_char(dianacimiento,'mm') = 5 or
+ 24  		   to_char(dianacimiento,'dd') <= 20 and
+ 25  		   to_char(dianacimiento,'mm') = 6
+ 26  	   THEN 'Geminis'
+ 27  	   WHEN to_char(dianacimiento,'dd') >= 21 and
+ 28  		   to_char(dianacimiento,'mm') = 6 or
+ 29  		   to_char(dianacimiento,'dd') <= 22 and
+ 30  		   to_char(dianacimiento,'mm') = 7
+ 31  	   THEN 'Cancer'
+ 32  	   WHEN to_char(dianacimiento,'dd') >= 23 and
+ 33  		   to_char(dianacimiento,'mm') = 7 or
+ 34  		   to_char(dianacimiento,'dd') <= 22 and
+ 35  		   to_char(dianacimiento,'mm') = 8
+ 36  	   THEN 'Leo'
+ 37  	   WHEN to_char(dianacimiento,'dd') >= 23 and
+ 38  		   to_char(dianacimiento,'mm') = 8 or
+ 39  		   to_char(dianacimiento,'dd') <= 22 and
+ 40  		   to_char(dianacimiento,'mm') = 9
+ 41  	   THEN 'Virgo'
+ 42  	   WHEN to_char(dianacimiento,'dd') >= 23 and
+ 43  		   to_char(dianacimiento,'mm') = 9 or
+ 44  		   to_char(dianacimiento,'dd') <= 22 and
+ 45  		   to_char(dianacimiento,'mm') = 10
+ 46  	   THEN 'Libra'
+ 47  	   WHEN to_char(dianacimiento,'dd') >= 23 and
+ 48  		   to_char(dianacimiento,'mm') = 10 or
+ 49  		   to_char(dianacimiento,'dd') <= 21 and
+ 50  		   to_char(dianacimiento,'mm') = 11
+ 51  	   THEN 'Escorbio'
+ 52  	   WHEN to_char(dianacimiento,'dd') >= 22 and
+ 53  		   to_char(dianacimiento,'mm') = 11 or
+ 54  		   to_char(dianacimiento,'dd') <= 21 and
+ 55  		   to_char(dianacimiento,'mm') = 12
+ 56  	   THEN 'Sagitario'
+ 57  	   WHEN to_char(dianacimiento,'dd') >= 22 and
+ 58  		   to_char(dianacimiento,'mm') = 12 or
+ 59  		   to_char(dianacimiento,'dd') <= 19 and
+ 60  		   to_char(dianacimiento,'mm') = 1
+ 61  	   THEN 'Capricornio'
+ 62  	   END "Ingreso"
+ 63  	from empleados
+ 64  where sexo = 'F'
+ 65  /
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Bayta ingreso a los 32 annos. Ella es Sagitario                                 
+Gaal ingreso a los 39 annos. Ella es Virgo                                      
+Gladia ingreso a los 26 annos. Ella es Piscis                                   
+Susan ingreso a los 33 annos. Ella es Sagitario                                 
+Dors ingreso a los 34 annos. Ella es Virgo                                      
+Ducem ingreso a los 29 annos. Ella es Libra                                     
+Harla ingreso a los 35 annos. Ella es Capricornio                               
+Lady ingreso a los 33 annos. Ella es Capricornio                                
+Mun Li ingreso a los 22 annos. Ella es Aries                                    
+Cinda ingreso a los 17 annos. Ella es Capricornio                               
+Sura ingreso a los 26 annos. Ella es Acuario                                    
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Jorame ingreso a los 38 annos. Ella es Libra                                    
+Jole ingreso a los 50 annos. Ella es Sagitario                                  
+Poly ingreso a los 28 annos. Ella es Acuario                                    
+Jezebel ingreso a los 45 annos. Ella es Acuario                                 
+Wanda ingreso a los 37 annos. Ella es Virgo                                     
+Lavinia ingreso a los 31 annos. Ella es Libra                                   
+Fanya ingreso a los 22 annos. Ella es Cancer                                    
+Gladia ingreso a los 29 annos. Ella es Libra                                    
+Vasilia ingreso a los 36 annos. Ella es Piscis                                  
+Linda ingreso a los 35 annos. Ella es Leo                                       
+Pola ingreso a los 21 annos. Ella es Libra                                      
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Little Miss ingreso a los 28 annos. Ella es Sagitario                           
+Galatea ingreso a los 27 annos. Ella es Virgo                                   
+Klorissa ingreso a los 22 annos. Ella es Escorbio                               
+Isabella ingreso a los 20 annos. Ella es Aries                                  
+Ada ingreso a los 31 annos. Ella es Geminis                                     
+Ana ingreso a los 30 annos. Ella es Libra                                       
+Eva ingreso a los 20 annos. Ella es Acuario                                     
+Lia ingreso a los 26 annos. Ella es Sagitario                                   
+Isabel ingreso a los 37 annos. Ella es Cancer                                   
+Isabela ingreso a los 21 annos. Ella es Cancer                                  
+Guadalupe ingreso a los 24 annos. Ella es Aries                                 
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Alana ingreso a los 24 annos. Ella es Capricornio                               
+Amanda ingreso a los 20 annos. Ella es Cancer                                   
+Diana ingreso a los 17 annos. Ella es Tauro                                     
+Clara ingreso a los 20 annos. Ella es Tauro                                     
+Claudia ingreso a los 39 annos. Ella es Cancer                                  
+Amaya ingreso a los 24 annos. Ella es Piscis                                    
+Gabriela ingreso a los 24 annos. Ella es Libra                                  
+Cecilia ingreso a los 28 annos. Ella es Cancer                                  
+Lucia ingreso a los 18 annos. Ella es Tauro                                     
+Victoria ingreso a los 23 annos. Ella es Sagitario                              
+Andrea ingreso a los 27 annos. Ella es Aries                                    
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Alejandra ingreso a los 30 annos. Ella es Piscis                                
+Amelia ingreso a los 34 annos. Ella es Tauro                                    
+Brenda ingreso a los 18 annos. Ella es Escorbio                                 
+Elena ingreso a los 33 annos. Ella es Piscis                                    
+Alexandra ingreso a los 31 annos. Ella es Geminis                               
+Ariana ingreso a los 27 annos. Ella es Aries                                    
+Eliana ingreso a los 33 annos. Ella es Acuario                                  
+Alicia ingreso a los 31 annos. Ella es Sagitario                                
+Emilia ingreso a los 19 annos. Ella es Aries                                    
+Leila ingreso a los 33 annos. Ella es Piscis                                    
+Alina ingreso a los 27 annos. Ella es Acuario                                   
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Elisa ingreso a los 21 annos. Ella es Aries                                     
+Iris ingreso a los 29 annos. Ella es Geminis                                    
+Olivia ingreso a los 19 annos. Ella es Acuario                                  
+Lila ingreso a los 19 annos. Ella es Acuario                                    
+Kira ingreso a los 29 annos. Ella es Tauro                                      
+Noelia ingreso a los 22 annos. Ella es Escorbio                                 
+Celeste ingreso a los 34 annos. Ella es Piscis                                  
+Selena ingreso a los 26 annos. Ella es Piscis                                   
+Valentina ingreso a los 26 annos. Ella es Aries                                 
+Valeria ingreso a los 35 annos. Ella es Virgo                                   
+Julia ingreso a los 28 annos. Ella es Cancer                                    
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Juliana ingreso a los 29 annos. Ella es Capricornio                             
+Lilian ingreso a los 21 annos. Ella es Escorbio                                 
+Isabel ingreso a los 23 annos. Ella es Libra                                    
+Melina ingreso a los 17 annos. Ella es Virgo                                    
+Talia ingreso a los 29 annos. Ella es Leo                                       
+Agatha ingreso a los 37 annos. Ella es Piscis                                   
+Joan ingreso a los 22 annos. Ella es Libra                                      
+Ximena ingreso a los 25 annos. Ella es Capricornio                              
+Carol ingreso a los 19 annos. Ella es Virgo                                     
+Linda ingreso a los 31 annos. Ella es Piscis                                    
+Sandra ingreso a los 26 annos. Ella es Sagitario                                
+
+Ingreso                                                                         
+--------------------------------------------------------------------------------
+Penelope ingreso a los 20 annos. Ella es Leo                                    
+Daniela ingreso a los 21 annos. Ella es Acuario                                 
+Dayana ingreso a los 25 annos. Ella es Cancer                                   
+Monica ingreso a los 37 annos. Ella es Cancer                                   
+Greta ingreso a los 22 annos. Ella es Virgo                                     
+
+82 rows selected.
+
+SQL> start 3
+SQL> select nombre, apellido, to_char(dianacimiento,'day') dia, to_char(dianacimiento,'dd') "dia mes",	to_char(dianacimiento,'mm') "mes"
+  2  from empleados
+  3  where SUBSTR(to_char(dianacimiento,'yyyy'),3,1) in ('5','7','9')
+  4  /
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+DANEEL               OLIVAW          wednesday        15      12                
+GISKARD              REVENTLOV       monday           09      03                
+JOSEPH               SCHWARTZ        saturday         19      01                
+ELIJAH               BALEY           thursday         20      11                
+BEL                  RIOSE           tuesday          21      05                
+GLADIA               SOLARIA         thursday         04      03                
+GOLAN                TREVIZE         wednesday        14      06                
+RAICH                SELDON          wednesday        03      03                
+SUSAN                CALVIN          friday           03      12                
+JANOV                PELORAT         friday           15      02                
+YUGO                 AMARIL          friday           07      07                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+DUCEM                BARR            sunday           03      10                
+ONUM                 BARR            friday           25      12                
+HARLA                BRANNO          thursday         02      01                
+LADY                 CALLIA          friday           16      01                
+LINGE                CHEN            tuesday          15      07                
+MUN LI               COMPOR          thursday         25      03                
+TORAN                DARELL          thursday         01      04                
+LORD                 DORWIN          sunday           24      06                
+TAMWIL               ELAR            monday           24      04                
+JORD                 FARA            sunday           24      12                
+YATE                 FULHAM          monday           08      06                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+STOR                 GENDIVAL        thursday         03      02                
+YOHAN                LEE             tuesday          23      10                
+JENARR               LEGGEN          wednesday        28      01                
+HOMIR                MUNN            saturday         20      12                
+SURA                 NOVI            sunday           11      02                
+STETTIN              PALVER          saturday         08      09                
+JORD                 PARMA           saturday         10      10                
+ELVETT               SEMIC           friday           08      08                
+SEF                  SERMAK          friday           12      09                
+QUINDOR              SHANDESS        monday           26      05                
+JORAME               SUTT            saturday         29      09                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+TOMAZ                SUTT            friday           30      05                
+JOLE                 TURBOR          monday           02      12                
+POLY                 VERISOF         wednesday        03      02                
+JULIUS               ENDERBY         sunday           22      03                
+JEZEBEL              BALEY           tuesday          02      02                
+ROJ NEMENNUH         SARTON          wednesday        02      03                
+HAN                  FASTOLFE        friday           05      11                
+ANTHONY              GERRIGEL        sunday           19      11                
+WANDA                SELDON          monday           25      08                
+CLEON                SEGUNDO         sunday           02      11                
+WILSON               ROTH            monday           02      12                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+LAVINIA              DEMACHECK       tuesday          29      09                
+ALBERT               MINNIN          tuesday          15      01                
+JANDER               PANELL          monday           23      09                
+FANYA                FASTOLFE        saturday         16      07                
+PANDION              GLADIA          wednesday        30      08                
+BORGRAF              GLADIA          wednesday        11      07                
+VASILIA              ALIENA          wednesday        14      03                
+LUMEN                FASTOLFE        wednesday        11      02                
+SANTIRIX             GREMIONIS       sunday           31      08                
+MALOON               CICIS           monday           15      03                
+RUTILAN              HORDER          sunday           28      11                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+ALTIM                THOOL           sunday           22      11                
+RIKAINE              DELMARRE        thursday         25      05                
+ROGEN                BENASTRA        tuesday          24      04                
+ENDOR                LEVANIAN        friday           16      07                
+JIRAD                TISALVER        monday           03      05                
+HANO                 LINDER          sunday           11      01                
+POLA                 SHEKT           sunday           10      10                
+ISABELLA             ROSETTI         wednesday        14      04                
+ANA                  ARTAFIA         tuesday          02      10                
+EVA                  ARANA           friday           10      02                
+LIA                  BRESNE          friday           08      12                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+ISABEL               BORJUES         tuesday          23      06                
+ISABELA              BALLASTARO      wednesday        24      06                
+ALANA                CERPETES        tuesday          08      01                
+AMANDA               TORRENS         sunday           27      06                
+DIANA                GURRIETEZ       monday           08      05                
+FRANCISCO            FONTINE         tuesday          06      03                
+IVAN                 LUPIES          saturday         13      05                
+JOAQUIN              MONTEBLANCO     monday           18      10                
+CLARA                VILLANOA        friday           01      05                
+OMAR                 LUBIN           thursday         25      06                
+CLAUDIA              DOLGEDO         friday           26      06                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+AMAYA                CRATOS          sunday           01      03                
+SEBASTIAN            DORDIGEZ        friday           19      05                
+ROBERTO              BALIREN         tuesday          03      03                
+RUBEN                CARILO          wednesday        03      03                
+FABIAN               ZORQUI          saturday         13      07                
+PABLO                SAMIS           thursday         28      10                
+GABRIELA             HACHEDOSO       sunday           03      10                
+LUCAS                NAVORRA         friday           21      09                
+OSCAR                JERTOS          friday           19      07                
+LUCIA                REBLOS          monday           18      05                
+VICTOR               DAQUESA         wednesday        18      03                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+ANDRES               ARFOLA          tuesday          03      04                
+PEDRO                JASOR           tuesday          30      04                
+NOE                  MARO            monday           18      10                
+AMELIA               LARIO           tuesday          07      05                
+BRENDA               VALLELDE        monday           25      10                
+EZEQUIEL             PIREZ           thursday         01      04                
+GUILLERMO            ALFAR           saturday         01      07                
+JAIME                ROSETTI         thursday         15      04                
+ELISA                ARANA           sunday           19      04                
+LUIS                 BORJUES         friday           04      05                
+OLIVER               BALLASTARO      tuesday          16      02                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+KIRA                 CERPETES        saturday         25      04                
+NOELIA               GURRIETEZ       thursday         08      11                
+CELESTE              ZAMBUDO         monday           22      02                
+VALERIA              SETIA           wednesday        21      09                
+JULIA                MONTEBLANCO     saturday         07      07                
+JULIANA              LUBIN           sunday           26      12                
+MELINA               BALIREN         monday           16      09                
+TALIA                CARILO          wednesday        22      08                
+ARMANDO              GOMEN           monday           06      12                
+ROMAN                SAMIS           tuesday          07      12                
+AGATHA               HACHEDOSO       thursday         11      03                
+
+NOMBRE               APELLIDO        DIA              dia mes mes               
+-------------------- --------------- ---------------- ------- ----              
+JOAN                 NAVORRA         monday           23      09                
+SAMUEL               REBLOS          thursday         28      09                
+LINDA                WASTON          thursday         18      03                
+SANDRA               SANCO           monday           05      12                
+ERNESTO              DAQUESA         saturday         18      12                
+PENELOPE             LAUGARI         tuesday          28      07                
+DANIEL               MAZDEN          sunday           16      01                
+DANIELA              CANALES         sunday           11      02                
+MONICA               PALVER          tuesday          24      06                
+SANTIAGO             PIRENNE         wednesday        13      06                
+MANUEL               RODRIC          friday           16      02                
+
+121 rows selected.
+
+SQL> start 4
+SQL> select nombre|| ' ' ||apellido "nombre", salario, LENGTH(nombre) "Logintud nombre",
+  2  	     case when length(concat(nombre,apellido)) >= 6  and length(concat(nombre,apellido)) <= 10
+  3  		     then 'Corto'
+  4  	     when length(concat(nombre,apellido)) >= 11  and length(concat(nombre,apellido)) <=14
+  5  		     then 'Medio'
+  6  	     when length(concat(nombre,apellido)) >= 15  and length(concat(nombre,apellido)) <= 20
+  7  		     then 'Largo'
+  8  	     end "leyenda"
+  9  from empleados
+ 10  where lower(nombre) like '%a' or lower(nombre) like '%o'
+ 11  /
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+BAYTA DARELL             420000               5 Medio                           
+ETO DEMERZEL            1200000               3 Medio                           
+GLADIA SOLARIA           770090               6 Medio                           
+YUGO AMARIL              250000               4 Corto                           
+HARLA BRANNO             320000               5 Medio                           
+CINDA MONAY             1200000               5 Corto                           
+SURA NOVI               1050000               4 Corto                           
+WANDA SELDON             610000               5 Medio                           
+LAVINIA DEMACHECK        860000               7 Largo                           
+FANYA FASTOLFE           620000               5 Medio                           
+GLADIA DELMARRE          320000               6 Medio                           
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+VASILIA ALIENA           280000               7 Medio                           
+ANSELMO QUEMOT           400000               7 Medio                           
+HANO LINDER              260000               4 Corto                           
+LINDA RASH               600000               5 Corto                           
+POLA SHEKT              1200000               4 Corto                           
+GALATEA DATA             530000               7 Medio                           
+KLORISSA CANTORO         730000               8 Largo                           
+ISABELLA ROSETTI         700000               8 Largo                           
+ADA ABEDUL               700000               3 Corto                           
+ANA ARTAFIA              750000               3 Corto                           
+EVA ARANA                745000               3 Corto                           
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+LIA BRESNE               690000               3 Corto                           
+ISABELA BALLASTARO       500900               7 Largo                           
+ALANA CERPETES           535000               5 Medio                           
+AMANDA TORRENS           610000               6 Medio                           
+DIANA GURRIETEZ          615000               5 Medio                           
+FRANCISCO FONTINE        485000               9 Largo                           
+CLARA VILLANOA           485000               5 Medio                           
+CLAUDIA DOLGEDO         1000000               7 Medio                           
+AMAYA CRATOS            1000000               5 Medio                           
+ROBERTO BALIREN         1000000               7 Medio                           
+PABLO SAMIS             1000000               5 Corto                           
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+GABRIELA HACHEDOSO       990000               8 Largo                           
+RICARDO ASARI            990000               7 Medio                           
+CECILIA CANZARRA         990000               7 Largo                           
+LUCIA REBLOS             990000               5 Medio                           
+VICTORIA LAUGARI         990000               8 Largo                           
+ANDREA MAZDEN            990000               6 Medio                           
+PEDRO JASOR              990000               5 Corto                           
+RODRIGO CONTILLA         990000               7 Largo                           
+DIEGO CHAPACO            990000               5 Medio                           
+ALEJANDRA PORTOLICAN     990000               9 Largo                           
+ALEJANDRO ENGALES       1800000               9 Largo                           
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+AMELIA LARIO            1800000               6 Medio                           
+BRENDA VALLELDE         1800000               6 Medio                           
+ELENA VILLABAJA         1800000               5 Medio                           
+ALEXANDRA AYARA         1190000               9 Medio                           
+HUGO LINDER             1190000               4 Corto                           
+ARIANA MARTIN           1190000               6 Medio                           
+ELIANA RASH             1190000               6 Corto                           
+ALICIA AVARDAN          1190000               6 Medio                           
+EMILIA SHEKT            1190000               6 Medio                           
+EMILIANO MARTIN          875000               8 Medio                           
+EMILIO MARTIN            875000               6 Medio                           
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+GUILLERMO ALFAR          875000               9 Medio                           
+LEILA CANTORO            875000               5 Medio                           
+ALINA ABEDUL             790850               5 Medio                           
+JAIRO ARTAFIA            790850               5 Medio                           
+ELISA ARANA              790850               5 Corto                           
+OLIVIA CANACCI           790850               6 Medio                           
+LILA COTTA               790850               4 Corto                           
+KIRA CERPETES            790850               4 Medio                           
+ORLANDO TORRENS          790850               7 Medio                           
+NOELIA GURRIETEZ         790850               6 Largo                           
+SELENA FONTINE           790850               6 Medio                           
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+VALENTINA BARQUIARO      790850               9 Largo                           
+VALERIA SETIA            790850               7 Medio                           
+JULIA MONTEBLANCO        790850               5 Largo                           
+JULIANA LUBIN            790850               7 Medio                           
+JULIO DOLGEDO            790850               5 Medio                           
+MELINA BALIREN           790850               6 Medio                           
+TALIA CARILO             790850               5 Medio                           
+ARMANDO GOMEN           1490150               7 Medio                           
+AGATHA HACHEDOSO         790850               6 Largo                           
+XIMENA JERTOS            790850               6 Medio                           
+LINDA WASTON             709800               5 Medio                           
+
+nombre                  SALARIO Logintud nombre leyenda                         
+-------------------- ---------- --------------- ----------                      
+SANDRA SANCO             709800               6 Medio                           
+ERNESTO DAQUESA          709800               7 Medio                           
+DANIELA CANALES         1300000               7 Medio                           
+DAYANA NOVI              900000               6 Corto                           
+MONICA PALVER            900000               6 Medio                           
+SANTIAGO PIRENNE         890000               8 Largo                           
+GRETA ALFAR              890000               5 Corto                           
+
+84 rows selected.
+
+SQL> start 5
+SQL> select apellido, nombre, trunc(months_between(SYSDATE, diaingreso) /12, 0) year,
+  2  trunc(mod(months_between(sysdate,diaingreso),12)) month,
+  3  trunc(sysdate - add_months(diaingreso, trunc(trunc(months_between(SYSDATE, diaingreso))))) day,
+  4  trunc(months_between(SYSDATE,dianacimiento)/12) old
+  5  from empleados
+  6  order by old
+  7  /
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+ARANA           EVA                           5          4         27         25
+THOOL           ALTIM                         4          7         15         27
+TORRENS         AMANDA                        7          0         10         27
+CARILO          RUBEN                         9          4          7         27
+PIREZ           EZEQUIEL                      5          3          7         27
+ROSETTI         JAIME                         7          2         27         27
+LAUGARI         PENELOPE                      7         11          9         27
+VILLANOA        CLARA                         7          2         11         28
+ZORQUI          FABIAN                        6          0          0         28
+JERTOS          OSCAR                         5         11         22         28
+REBLOS          LUCIA                         9          1         24         28
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+BALIREN         MELINA                       10          9         26         28
+NAVORRA         JOAN                          5          9         17         28
+MINNIN          ALBERT                        7          5         26         29
+GLADIA          BORGRAF                       9          0          2         29
+CERPETES        ALANA                         5          6          0         29
+NAVORRA         LUCAS                         7          9         22         29
+GURRIETEZ       NOELIA                        6          8          4         29
+BENASTRA        ROGEN                         6          2         16         30
+LAUGARI         VICTORIA                      6          7          6         30
+MARTIN          EMILIANO                      5          6         11         30
+CANALES         DANIELA                       8          5          1         30
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+RODRIC          MANUEL                        9          4         26         30
+VILLANOA        JULIAN                       10          3         12         31
+CLOUSARR        FRANCIS                      11          2         22         32
+GOMEN           TOBIAS                        5          3          9         32
+MAZDEN          ANDREA                        5          2         23         32
+DOLGEDO         JULIO                        14          9         17         32
+NOLOSA          TOMAS                        12         11          0         32
+NOVI            DAYANA                        6          0         21         32
+ALFAR           GRETA                         9         10         11         32
+DEVERS          LATHAN                       11          9         24         33
+TWER            JAIM                          6         11          7         33
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+LEEBIG          JOTHAN                        9          0         25         33
+SETIA           ADAN                          9          1         16         33
+NOLOSA          GABRIEL                       8         11          0         33
+CONTILLA        RODRIGO                      12         10         15         33
+DORDIGEZ        ISABEL                       10          8         28         33
+AMADIRO         KELDEN                       12          5          7         34
+BARQUIARO       JUAN                         12          9         10         34
+ARTAFIA         JAIRO                         7          7         13         34
+JERTOS          XIMENA                        8          6         19         34
+DEMERZEL        ETO                           5          6          5         35
+CANACCI         GUADALUPE                    11          3          0         35
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+MARTIN          EMILIO                        7          5         14         35
+CANACCI         OLIVIA                       16          5          5         35
+COTTA           LILA                         16          5          4         35
+ALURIN          BOR                          10         10         16         36
+RODRIC          ANSELM HAUT                   5          5         10         36
+PORTOLICAN      ALEJANDRA                     5          4          0         36
+DERILO          JOEL                          5          3         25         36
+SHEKT           EMILIA                       16          3         12         36
+BARQUIARO       VALENTINA                     9          2         25         36
+ASARI           CAROL                        16         10         10         36
+CANALES         SIMON                         9          0          2         36
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+PRIMERO         CLEON                        16          7          9         37
+ANTHOR          PELLEAS                       5          7          2         37
+AVARDAN         BEL                           4         10          9         37
+DATA            GALATEA                       9         10          3         37
+WASTON          NICOLAS                      10          2          2         37
+TORRENS         ORLANDO                      10         10         23         37
+HARDIN          SALVOR                       20          1         20         38
+BRODRIG         AMMEL                         9          8         19         38
+DATA            ANDREW                       13          3          3         38
+ZAMBUDO         EMANUEL                      17         10         17         38
+CRATOS          LILIAN                       17          8          4         38
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+CRAST           LUNDIN                       11          2          9         39
+BALEY           BENTLEY                      18          1         25         39
+QUEMOT          ANSELMO                       4         10         20         39
+ASARI           RICARDO                      16          7         26         39
+CANALES         LUCIAN                       17          7         22         39
+AVARDAN         ALICIA                        7          7          1         39
+PARMA           BENJAMIN                     20          5          9         39
+FORELL          SENNET                       20          1          3         40
+MONAY           CINDA                        22          6          2         40
+PIRENNE         LEWIS                         7          3          2         40
+MIS             EBLING                       13          0         27         40
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+ATTLEBISH       CORWIN                       17          1         28         40
+COTTA           ALAN                         16          2          6         40
+RASH            ELIANA                        6          5          1         40
+CANTORO         LEILA                         6          4         23         40
+FONTINE         SELENA                       14          4          1         40
+LUPIES          FELIPE                       21          0         18         40
+GLADIA          PANDION                       5         10         14         41
+FONTINE         FRANCISCO                    10          4          3         41
+ARFOLA          ANDRES                       23          3          3         41
+BORJUES         LUIS                         21          2          7         41
+MONTEBLANCO     JULIA                        12          0          7         41
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+REBLOS          SAMUEL                       23          9          8         41
+PIRENNE         SANTIAGO                     18          0         25         41
+TREVIZE         GOLAN                         7          0         27         42
+ELAR            TAMWIL                       21          2         16         42
+FASTOLFE        FANYA                        20         11         22         42
+GURRIETEZ       DIANA                        24          2          4         42
+LUPIES          IVAN                          9          2          1         42
+DORDIGEZ        SEBASTIAN                     7          1         27         42
+ALFAR           GUILLERMO                    20          0          9         42
+SETIA           VALERIA                       6          9         20         42
+SANCO           SANDRA                       15          7          8         42
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+SARTON          ROJ NEMENNUH                 17          4          6         43
+LEVANIAN        ENDOR                        21         11         27         43
+SHEKT           POLA                         22          8         26         43
+HACHEDOSO       GABRIELA                     19          9          6         43
+MARO            NOE                          24          8         22         43
+VALLELDE        BRENDA                       25          8         13         43
+GOMEN           ARMANDO                      21          7          4         43
+SAMIS           ROMAN                        25          7          3         43
+DAQUESA         ERNESTO                       7          6         22         43
+BALEY           ELIJAH                       19          7         20         44
+SOLARIA         GLADIA                       18          4          4         44
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+CALLIA          LADY                         10          5         25         44
+CHEN            LINGE                        18         11         25         44
+COMPOR          MUN LI                       22          3         11         44
+DARELL          TORAN                        15          3          8         44
+FASTOLFE        LUMEN                        14          5          0         44
+CICIS           MALOON                        5          4          0         44
+TISALVER        JIRAD                        13          2          5         44
+SUTT            TOMAZ                         8          1         17         45
+PANELL          JANDER                       19          9         19         45
+PALVER          MONICA                        7          0         19         45
+RIOSE           BEL                          17          1         21         46
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+PELORAT         JANOV                        12          4         29         46
+ARTAFIA         ANA                          15          9          8         46
+JASOR           PEDRO                        23          2          9         46
+LARIO           AMELIA                       11          2          5         46
+CARILO          TALIA                        16         10         18         46
+DORWIN          LORD                         18          0         20         47
+FARA            JORD                         22          6         18         47
+NOVI            SURA                         20          5          2         47
+GERRIGEL        ANTHONY                       8          7         25         47
+ALIENA          VASILIA                      10          3         28         47
+BRESNE          LIA                          20          7          4         47
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+OLIVAW          DANEEL                       24          6         29         48
+CALVIN          SUSAN                        14          7         11         48
+AMARIL          YUGO                          8          0         10         48
+BARR            DUCEM                        18          9          7         48
+GENDIVAL        STOR                         17          5         11         48
+FASTOLFE        HAN                          22          8          4         48
+HORDER          RUTILAN                      24          7         10         48
+DELMARRE        RIKAINE                      29          1         15         48
+MONTEBLANCO     JOAQUIN                      11          8         26         48
+SAMIS           PABLO                        24          8         15         48
+LUBIN           JULIANA                      18          6         17         48
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+MAZDEN          DANIEL                       18          5         29         48
+SELDON          RAICH                        12          4         16         49
+BARR            ONUM                         21          6         19         49
+PARMA           JORD                         22          9          3         49
+VERISOF         POLY                         20          5         10         49
+ROSETTI         ISABELLA                     28          2         28         49
+BALLASTARO      OLIVER                       19          4         23         49
+ZAMBUDO         CELESTE                      14          4         24         49
+HACHEDOSO       AGATHA                       11          4          3         49
+WASTON          LINDA                        17          3         28         49
+REVENTLOV       GISKARD                      23          4          4         50
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+LINDER          HANO                         23          6          0         50
+BORJUES         ISABEL                       12          0         23         50
+BALLASTARO      ISABELA                      29          0         14         50
+CRATOS          AMAYA                        25          4          9         50
+BALIREN         ROBERTO                      11          4          9         50
+DAQUESA         VICTOR                       17          3         28         50
+ARANA           ELISA                        28          2         23         50
+CERPETES        KIRA                         20          2         18         50
+VENABILI        DORS                         16         10          4         51
+AVAKIM          LORS                         18         10         29         51
+LEPOLD          REGELE                       23          9          0         51
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+CANZARRA        CECILIA                      22         11         19         51
+MALLOW          HOBER                        14          9         16         52
+DARELL          BAYTA                        20          7          9         52
+DORNICK         GAAL                         12         10         12         52
+WIENIS          PRINTUL REGENT               21          1         14         52
+COLVA           ABEL                         19          9          7         52
+MARTIN          RICHARD                      20         10         24         53
+CANTORO         KLORISSA                     30          8         16         53
+SANCO           HECTOR                       21          7          7         53
+BARRETT         VINCE                        29         10          9         54
+VILLABAJA       ELENA                        20          4         25         54
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+LINDER          HUGO                         18          4         22         54
+ALFAR           RAPHAEL                      22          4         14         54
+SHEKT           ELIAS                        15          2         13         55
+GREMIONIS       BRUNDIJ                      18          5         23         56
+INDBUR          PRIMARUL                     16          7         20         56
+SELDON          HARI                         33          0         25         56
+CANZARRA        RAMON                        26          8         17         56
+DELMARRE        GLADIA                       27          9          6         56
+MANLIO          PUBLIS                       23          1          8         57
+MARTIN          GEORGE                       30          6         21         57
+BAYTA           TORAN SI                     18          3         20         57
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+ABEDUL          ALINA                        31          5         10         58
+MARTIN          LITTLE MISS                  29          7          2         58
+RASH            LINDA                        22         11         11         58
+GRUBER          MANDELL                      24         11         14         58
+THALUS          EMMER                        31          1          1         59
+ABEDUL          ADA                          27          1          9         59
+MARTIN          ARIANA                       31          3         18         59
+JORANUM         LASKIN                       26          1         17         59
+HUMMIN          CHETTER                      30         10         11         59
+DARELL          ARKADY                       29          3         24         59
+ZORQUI          WILLIAM                      27          0          7         60
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+BRESNE          IRIS                         30          1          3         60
+THALUS          MIGUEL                       31          1         16         60
+AYARA           ALEXANDRA                    28          1         17         60
+ENGALES         ALEJANDRO                    25          1         22         60
+CHAPACO         DIEGO                        21          1         27         60
+SHEKT           AFFRET                       21          5         24         60
+DEMACHECK       LAVINIA                      28          9         14         60
+GREMIONIS       SANTIRIX                     23         10         11         61
+SEGUNDO         CLEON                        27          8          8         61
+LUBIN           OMAR                         18          0         21         61
+FULHAM          YATE                         23          1          9         61
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+SERMAK          SEF                          25         10          5         61
+SEMIC           ELVETT                       19         11         10         61
+DOLGEDO         CLAUDIA                      21          0         17         61
+BRANNO          HARLA                        26          6         14         62
+ROTH            WILSON                       19          7         11         62
+TURBOR          JOLE                         11          7         16         62
+LEE             YOHAN                        22          8         23         63
+PALVER          STETTIN                      27         10          5         63
+BALEY           JEZEBEL                      20          5         16         66
+LEGGEN          JENARR                       25          5         15         67
+MUNN            HOMIR                        32          6         21         67
+
+APELLIDO        NOMBRE                     YEAR      MONTH        DAY        OLD
+--------------- -------------------- ---------- ---------- ---------- ----------
+SELDON          WANDA                        29         10         19         67
+ENDERBY         JULIUS                       27          3         24         67
+SCHWARTZ        JOSEPH                       29          5         29         68
+SHANDESS        QUINDOR                      28          1         17         68
+SUTT            JORAME                       29          9         16         68
+
+225 rows selected.
+
+SQL> spool off

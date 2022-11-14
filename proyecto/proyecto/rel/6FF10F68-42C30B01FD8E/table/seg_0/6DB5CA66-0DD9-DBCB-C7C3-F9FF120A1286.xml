@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6DB5CA66-0DD9-DBCB-C7C3-F9FF120A1286" name="RepartosPelicula">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla del reparto de la pelicula]]></commentInRDBMS>
+<generatorID>9B8C0445-4368-199D-9578-A08C88A96C9D</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idArtista" id="1E7238DE-2051-F642-F797-C7D754A0F6E2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del artista]]></commentInRDBMS>
+<generatorID>502DEA20-B0E7-3FCE-302D-96574C28C36B</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1CD294A3-DFAF-8E06-37DD-FACD9E577460" referredColumn="9635EE82-C6B7-B0A5-5E4B-8BE0AA45A418"/>
+</associations>
+</Column>
+<Column name="idPelicula" id="7C524A48-3239-2FA1-3BEE-06ED6D84A672">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del pelicula]]></commentInRDBMS>
+<generatorID>EAE14DE8-D35C-5FCC-FA97-0FF077BEF572</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CBD1BF5D-B5C0-08BD-C23C-1D7289C58804" referredColumn="4DBD296C-1FE1-450F-F178-02B84D38A68F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4063E2CB-F675-0637-5735-035A1753427A" name="RepartosPelicula_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>DB29F993-5EFE-8285-E0DE-7087F0CB2ECC</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C524A48-3239-2FA1-3BEE-06ED6D84A672"/>
+<colUsage columnID="1E7238DE-2051-F642-F797-C7D754A0F6E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C243909D-FB36-41FF-D66E-7268F1220CBC" name="reparto_artista">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>439DA7BF-97A7-DE1E-7E07-529C63DF24CE</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E7238DE-2051-F642-F797-C7D754A0F6E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="91613435-CF91-B401-A6D5-8DFB033E83DC" name="reparto_pelicula">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>725CB82E-F15C-91A3-1248-322C43066820</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C524A48-3239-2FA1-3BEE-06ED6D84A672"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

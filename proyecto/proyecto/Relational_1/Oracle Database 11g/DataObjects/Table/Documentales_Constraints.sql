@@ -1,0 +1,1 @@
+ALTER TABLE documentales ADD CONSTRAINT documentales_pk PRIMARY KEY ( id );

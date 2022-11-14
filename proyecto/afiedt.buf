@@ -1,0 +1,4 @@
+select nombre from artistas
+where id = 11
+
+/

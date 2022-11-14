@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8B0758E3-625D-35A5-51E5-CCEE1DC72D24" name="Clasificaciones">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla de clasificaciones de series y peliculas]]></commentInRDBMS>
+<generatorID>885EB2BF-E907-AF2D-DAE6-980256CD5915</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipoClasificacion" id="F6B096F9-3837-8132-CA7D-46EDD9455615">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo clasificacion]]></commentInRDBMS>
+<generatorID>F7511642-6F4D-840A-6A77-CD497D40C62A</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<domain>DA62A35A-EA73-182D-08A8-F166847DC236</domain>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>true</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="94BFB0BC-FE83-7D68-2FA7-E65C3A25DFD1" name="Clasificaciones_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>DB0DC859-F1DA-077A-8FD1-D87FED81B465</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6B096F9-3837-8132-CA7D-46EDD9455615"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

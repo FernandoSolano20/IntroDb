@@ -1,0 +1,1 @@
+ALTER TABLE videosmusicales ADD CONSTRAINT videosmusicales_pk PRIMARY KEY ( id );

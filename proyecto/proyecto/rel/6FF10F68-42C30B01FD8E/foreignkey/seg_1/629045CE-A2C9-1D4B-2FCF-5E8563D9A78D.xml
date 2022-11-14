@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="629045CE-A2C9-1D4B-2FCF-5E8563D9A78D" containerWithKeyObject="D0653A8F-9497-7CD7-2788-7F018CBEB1C4" localFKIndex="78CC4505-83ED-4977-D742-F55D506F8A6B" name="formato_audiolibrov1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:57:05 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>FormatoAudioLibro</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FBF09BB7-D2E0-5CAC-79FE-3C6A903F4A52</referredTableID>
+<keyObject>FE6C1F5B-8350-8B24-4C3D-38D1052594E2</keyObject>
+<referredKeyID>FE6C1F5B-8350-8B24-4C3D-38D1052594E2</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

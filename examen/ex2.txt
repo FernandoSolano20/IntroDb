@@ -1,0 +1,200 @@
+SQL> start 1
+SQL> UPDATE empleados
+  2   SET idjefe = (select idemp
+  3  		     from (select e.idemp
+  4  			     from empleados e
+  5  			     join puestos p on (e.idpuesto = p.idpuesto)
+  6  			     where p.titulo = 'Programador'
+  7  			     order by e.dianacimiento asc)
+  8  		     where rownum <= 1)
+  9  where idemp in (select e.idemp
+ 10  			 from empleados e
+ 11  			 join puestos p on (e.idpuesto = p.idpuesto)
+ 12  			 where p.titulo = 'Programador')
+ 13  /
+
+23 rows updated.
+
+SQL> start 2
+SQL> UPDATE empleados
+  2  SET idjefe = (select iddirector
+  3  		     from departamentos
+  4  		     where nombre = 'Sistemas')
+  5  where idemp = (select idemp
+  6  		     from (select e.idemp
+  7  			     from empleados e
+  8  			     join puestos p on (e.idpuesto = p.idpuesto)
+  9  			     where p.titulo = 'Programador'
+ 10  			     order by e.dianacimiento asc)
+ 11  		     where rownum <= 1)
+ 12  /
+
+1 row updated.
+
+SQL> start 3
+SQL> INSERT INTO puestos values ('DG01', 'Director General', 1200000, 3400000)
+  2  /
+
+1 row created.
+
+SQL> start 4
+SQL> UPDATE empleados
+  2  SET idpuesto = 'DG01'
+  3  where idemp in (select idemp
+  4  		     from empleados
+  5  		     where idemp in (select distinct iddirector
+  6  				     from departamentos
+  7  				     where iddirector is not null))
+  8  /
+
+12 rows updated.
+
+SQL> start 5
+SQL> UPDATE empleados
+  2  set iddep = (select iddep
+  3  		     from (select d.iddep
+  4  			     from departamentos d
+  5  			     where iddep not in (select distinct iddep
+  6  						 from empleados
+  7  						 where iddep is not null))
+  8  		     where rownum <= 1),
+  9  	 salario = (salario + salario * 0.25)
+ 10  where idemp in (select idemp
+ 11  		     from (select idemp
+ 12  			     from empleados
+ 13  			     order by salario asc)
+ 14  		     where rownum <= 4)
+ 15  /
+
+4 rows updated.
+
+SQL> start 5
+SQL> UPDATE empleados
+  2  set iddep = (select iddep
+  3  		     from (select d.iddep
+  4  			     from departamentos d
+  5  			     where iddep not in (select distinct iddep
+  6  						 from empleados
+  7  						 where iddep is not null))
+  8  		     where rownum <= 1),
+  9  	 salario = (salario + salario * 0.25)
+ 10  where idemp in (select idemp
+ 11  		     from (select idemp
+ 12  			     from empleados
+ 13  			     order by salario asc)
+ 14  		     where rownum <= 4)
+ 15  /
+
+4 rows updated.
+
+SQL> start 6
+SQL> select nombre, apellido, edad, antiguedad, pais
+  2  from (select e.nombre, e.apellido, trunc(months_between(SYSDATE, dianacimiento) /12, 0) edad, trunc(months_between(SYSDATE, diaingreso) /12, 0) antiguedad, p.nombre pais
+  3  	     from empleados e
+  4  	     join departamentos d on (d.iddep = e.iddep)
+  5  	     join oficinas o on (o.idoficina = d.idoficina)
+  6  	     join paises p on (p.idpais = o.idpais)
+  7  	     where idemp in (select distinct idjefe
+  8  				 from empleados
+  9  				 where idjefe is not null)
+ 10  	     and idemp not in (select distinct iddirector
+ 11  				 from departamentos
+ 12  				 where iddirector is not null)
+ 13  	     order by diaingreso desc)
+ 14  where rownum <= 2
+ 15  UNION
+ 16  select nombre, apellido, edad, antiguedad, pais
+ 17  from (select e.nombre, e.apellido, trunc(months_between(SYSDATE, dianacimiento) /12, 0) edad, trunc(months_between(SYSDATE, diaingreso) /12, 0) antiguedad, p.nombre pais
+ 18  	     from empleados e
+ 19  	     join departamentos d on (d.iddep = e.iddep)
+ 20  	     join oficinas o on (o.idoficina = d.idoficina)
+ 21  	     join paises p on (p.idpais = o.idpais)
+ 22  	     where idemp NOT IN (select distinct idjefe
+ 23  				 from empleados
+ 24  				 where idjefe is not null)
+ 25  	     order by dianacimiento desc)
+ 26  where rownum <= 5
+ 27  order by apellido, nombre
+ 28  /
+
+NOMBRE          APELLIDO                        EDAD ANTIGUEDAD PAIS                                
+--------------- ------------------------- ---------- ---------- ---------------                     
+EVA             ARANA                             25          5 United Kingdom                      
+RUBEN           CARILO                            27          9 Estados Unidos                      
+EMILIANO        MARTIN                            30          5 United Kingdom                      
+EZEQUIEL        PIREZ                             27          5 Alemania                            
+JAIME           ROSETTI                           27          7 Estados Unidos                      
+ALTIM           THOOL                             27          4 Estados Unidos                      
+AMANDA          TORRENS                           27          7 Estados Unidos                      
+
+7 rows selected.
+
+SQL> start 7
+SQL> select c.nombre,
+  2  		     (select sum(ee.salario)
+  3  		     from empleados ee
+  4  		     join departamentos dd on (dd.iddep = ee.iddep)
+  5  		     join oficinas oo on (oo.idoficina = dd.idoficina)
+  6  		     join paises pp on (pp.idpais = oo.idpais)
+  7  		     join continentes cc on (cc.idcont = pp.idcont)
+  8  		     where cc.idcont = c.idcont
+  9  		     and ee.idemp not in (select distinct idjefe
+ 10  				     from empleados
+ 11  				     where idjefe is not null)) "total salario subalterno",
+ 12  		     (select sum(ee.salario)
+ 13  		     from empleados ee
+ 14  		     join departamentos dd on (dd.iddep = ee.iddep)
+ 15  		     join oficinas oo on (oo.idoficina = dd.idoficina)
+ 16  		     join paises pp on (pp.idpais = oo.idpais)
+ 17  		     join continentes cc on (cc.idcont = pp.idcont)
+ 18  		     where ee.idemp in (select distinct idjefe
+ 19  				     from empleados
+ 20  				     where idjefe is not null)
+ 21  		     and cc.idcont = c.idcont) "total salario jefes",
+ 22  		     sum(1) "total empleados",
+ 23  		     max(e.salario) Maximo,
+ 24  		     min(e.salario) minimo
+ 25  from continentes c
+ 26  join paises p on (p.idcont = c.idcont)
+ 27  join oficinas o on (o.idpais = p.idpais)
+ 28  join departamentos d on (d.idoficina = o.idoficina)
+ 29  join empleados e on (e.iddep = d.iddep)
+ 30  group by c.nombre, c.idcont
+ 31  /
+
+NOMBRE          total salario subalterno total salario jefes total empleados     MAXIMO     MINIMO  
+--------------- ------------------------ ------------------- --------------- ---------- ----------  
+Europa                          66400000             9365070              81    1400070     610000  
+Asia                              530000             6700000               4    2600000     530000  
+Americas                        79970010            15835490             140    1800000     250000  
+
+3 rows selected.
+
+SQL> start 8
+SQL> select d.nombre, dir.apellido, sum(1) "cantidad empleados", sum(e.salario) "salario"
+  2  from departamentos d
+  3  join empleados dir on (d.iddirector = dir.idemp)
+  4  join empleados e on (e.iddep = d.iddep)
+  5  group by d.nombre, dir.apellido
+  6  /
+
+NOMBRE          APELLIDO                  cantidad empleados    salario                             
+--------------- ------------------------- ------------------ ----------                             
+Compras         PRIMERO                                    5    2240160                             
+Proveduria      ANTHOR                                    38   14010090                             
+Auditoria       SHEKT                                      3    2560000                             
+Finanzas        DEMERZEL                                  13   10128800                             
+Recursos Humano SHEKT                                      5    4150000                             
+s                                                                                                   
+                                                                                                    
+Internacional   AVARDAN                                    6    5470000                             
+Ventas          LEPOLD                                    60   54245070                             
+Administracion  MARTIN                                     1     440000                             
+Marketing       DATA                                       9    6351200                             
+Sistemas        DARELL                                     6    3610000                             
+Presidencia     SELDON                                     4    7230000                             
+Legal           ALURIN                                     6   10800000                             
+
+12 rows selected.
+
+SQL> spool off

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RepartoSerie Artistas FK" directorySegmentName="seg_0" id="EC234122-C182-164B-A409-3C868AB2E5CB">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:10:20 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>59D3A710-B701-5048-C1EE-06A4D8CA4872</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>948C5FAA-A5B6-055A-0391-24986F1B0BD5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EC62B094-7EC3-6E7B-D384-DBD5804AFE09</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

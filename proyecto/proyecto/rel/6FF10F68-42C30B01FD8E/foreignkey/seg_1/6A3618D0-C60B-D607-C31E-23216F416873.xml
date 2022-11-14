@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="6A3618D0-C60B-D607-C31E-23216F416873" containerWithKeyObject="A9D14279-B7B9-2091-91A4-D23DA251A702" localFKIndex="720EB80A-1A7F-A814-C060-5532244BCB27" name="documentales_formato2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>287D1E04-D39B-EF34-9294-066F60748D2F</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>Formatos</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>767FF925-2917-AA05-4957-FED5742C0C94</referredTableID>
+<keyObject>A1773A2D-548B-3959-52EB-367981F9854B</keyObject>
+<referredKeyID>A1773A2D-548B-3959-52EB-367981F9854B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>formato</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

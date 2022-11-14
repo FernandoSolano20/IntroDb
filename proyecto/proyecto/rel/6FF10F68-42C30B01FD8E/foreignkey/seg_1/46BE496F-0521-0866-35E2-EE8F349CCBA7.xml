@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="46BE496F-0521-0866-35E2-EE8F349CCBA7" containerWithKeyObject="1066E6C0-9CB0-E32C-D515-663916FA20BD" localFKIndex="E4DB66E3-2573-4C66-406A-AE8BCF57CF09" name="TansmicionesEnVivo_Generos_FK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 10:54:20 UTC</createdTime>
+<generatorID>E6199FC1-8191-4F9F-C2C4-D594C287075E</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>Generos</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>68A7D588-D51A-C26D-3D47-14D61B38B64F</referredTableID>
+<keyObject>C8F4B843-CD53-14F1-5017-7E12CD7D568A</keyObject>
+<referredKeyID>C8F4B843-CD53-14F1-5017-7E12CD7D568A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>tipo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

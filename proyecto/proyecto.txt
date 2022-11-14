@@ -1,0 +1,323 @@
+SQL> start 1
+SQL> SELECT p.titulo, g.tipo GENERO, to_char(p.anno, 'yyyy') "ANNO"
+  2  FROM peliculas p
+  3  JOIN generos g on (p.idgenero = g.tipo)
+  4  UNION
+  5  SELECT s.titulo, g.tipo GENERO, to_char(s.anno, 'yyyy') "ANNO"
+  6  FROM series s
+  7  JOIN generos g on (s.idgenero = g.tipo)
+  8  UNION
+  9  SELECT a.titulo, g.tipo GENERO, to_char(a.fecha, 'yyyy') "ANNO"
+ 10  FROM audiolibro a
+ 11  JOIN generos g on (a.idgenero = g.tipo)
+ 12  order by GENERO, ANNO
+ 13  /
+
+TITULO                         GENERO               ANNO                                                                                                                                                
+------------------------------ -------------------- ----                                                                                                                                                
+El Cine seg£n Hitchcock        Comedia              2013                                                                                                                                                
+Deadpool                       Comedia              2014                                                                                                                                                
+Los vengadores I               Comedia              2014                                                                                                                                                
+Deadpool II                    Comedia              2015                                                                                                                                                
+Los vengadores II              Comedia              2015                                                                                                                                                
+Caras y lugares                Comedia              2017                                                                                                                                                
+El castillo de cristal         Comedia              2017                                                                                                                                                
+Fast and Furious 7             Comedia              2017                                                                                                                                                
+Feliz d¡a de tu muerte         Comedia              2017                                                                                                                                                
+Memorias                       Comedia              2017                                                                                                                                                
+Teatro de cabaret              Comedia              2017                                                                                                                                                
+
+TITULO                         GENERO               ANNO                                                                                                                                                
+------------------------------ -------------------- ----                                                                                                                                                
+Vikingos                       Comedia              2017                                                                                                                                                
+Cinematograf¡a: teor¡a y pr ct Comedia Negra        2017                                                                                                                                                
+ica                                                                                                                                                                                                     
+                                                                                                                                                                                                        
+Del arte del teatro            Comedia Negra        2017                                                                                                                                                
+Fast and Furious 8             Comedia Negra        2017                                                                                                                                                
+Los Soprano                    Comedia Negra        2017                                                                                                                                                
+Mudbound                       Comedia Negra        2017                                                                                                                                                
+Conquista de lo in£til         Comedia Rom ntica    2000                                                                                                                                                
+Crudo                          Comedia Rom ntica    2016                                                                                                                                                
+Chernobyl                      Comedia Rom ntica    2017                                                                                                                                                
+
+TITULO                         GENERO               ANNO                                                                                                                                                
+------------------------------ -------------------- ----                                                                                                                                                
+Hijos de la anarqu¡a           Comedia Rom ntica    2017                                                                                                                                                
+Moby Dick, un ensayo           Comedia Rom ntica    2017                                                                                                                                                
+One Cut of The Dead            Comedia Rom ntica    2017                                                                                                                                                
+Por un teatro c¡vico           Gore                 2006                                                                                                                                                
+Peaky Blinders                 Gore                 2016                                                                                                                                                
+Breaking Bad                   Gore                 2017                                                                                                                                                
+Jumanji: Bienvenidos a la jung Gore                 2017                                                                                                                                                
+la                                                                                                                                                                                                      
+                                                                                                                                                                                                        
+On Directing Film              Gore                 2017                                                                                                                                                
+Tierra de Dios                 Gore                 2017                                                                                                                                                
+
+TITULO                         GENERO               ANNO                                                                                                                                                
+------------------------------ -------------------- ----                                                                                                                                                
+Misterio y festival            Telenovela           2013                                                                                                                                                
+As¡ se hacen las pel¡culas     Telenovela           2015                                                                                                                                                
+En la playa sola de noche      Telenovela           2017                                                                                                                                                
+Outlander                      Telenovela           2017                                                                                                                                                
+Todo el dinero del mundo       Telenovela           2017                                                                                                                                                
+En el momento del parpadeo: Un Terror               2017                                                                                                                                                
+ punto de vista sobre el monta                                                                                                                                                                          
+je cinematogr fico                                                                                                                                                                                      
+                                                                                                                                                                                                        
+Juego de Tronos                Terror               2017                                                                                                                                                
+La suerte de los Logan         Terror               2017                                                                                                                                                
+
+TITULO                         GENERO               ANNO                                                                                                                                                
+------------------------------ -------------------- ----                                                                                                                                                
+Sherlock                       Terror               2017                                                                                                                                                
+La cadena rota                 Thriller             2000                                                                                                                                                
+Rebelde sin pasta              Thriller             2006                                                                                                                                                
+Your Name                      Thriller             2016                                                                                                                                                
+Hostiles                       Thriller             2017                                                                                                                                                
+Columbus                       Thriller Gangster o  2017                                                                                                                                                
+                               de mafia                                                                                                                                                                 
+                                                                                                                                                                                                        
+Teatro, pol¡tica, sociedad     Thriller Gangster o  2017                                                                                                                                                
+                               de mafia                                                                                                                                                                 
+                                                                                                                                                                                                        
+
+TITULO                         GENERO               ANNO                                                                                                                                                
+------------------------------ -------------------- ----                                                                                                                                                
+Matarile                       Thriller Inform tico 2013                                                                                                                                                
+La muerte de Stalin            Thriller Inform tico 2017                                                                                                                                                
+Democracia                     Thriller Legal o jur 2000                                                                                                                                                
+                               ¡dico                                                                                                                                                                    
+                                                                                                                                                                                                        
+The Meyerowitz Stories         Thriller Legal o jur 2017                                                                                                                                                
+                               ¡dico                                                                                                                                                                    
+                                                                                                                                                                                                        
+Dramaturgia de Hamburgo        Thriller Psicol¢gico 2017                                                                                                                                                
+El pan de la guerra (The Bread Thriller Psicol¢gico 2017                                                                                                                                                
+winner)                                                                                                                                                                                                 
+
+TITULO                         GENERO               ANNO                                                                                                                                                
+------------------------------ -------------------- ----                                                                                                                                                
+                                                                                                                                                                                                        
+Anastasia y yo; la historia de Thriller policiaco   2017                                                                                                                                                
+ Kullervo                                                                                                                                                                                               
+                                                                                                                                                                                                        
+Los Originales                 Thriller policiaco   2017                                                                                                                                                
+Un don excepcional             Thriller policiaco   2017                                                                                                                                                
+Baile de huesos                Thriller pol¡tico    2015                                                                                                                                                
+En la sombra                   Thriller pol¡tico    2017                                                                                                                                                
+
+55 rows selected.
+
+SQL> start 2
+SQL> SELECT s.sagapelicula NOMBRE, g.tipo, to_char(p.anno, 'yyyy') "ANNO"
+  2  FROM sagas s
+  3  JOIN peliculas p on (s.id = p.idsaga)
+  4  JOIN generos g ON (g.tipo = p.idgenero)
+  5  /
+
+NOMBRE               TIPO                 ANNO                                                                                                                                                          
+-------------------- -------------------- ----                                                                                                                                                          
+Saga rapidos y furio Comedia              2017                                                                                                                                                          
+sos                                                                                                                                                                                                     
+                                                                                                                                                                                                        
+Saga Vengadores      Comedia              2014                                                                                                                                                          
+Saga Vengadores      Comedia              2015                                                                                                                                                          
+Saga Deapool         Comedia              2014                                                                                                                                                          
+Saga Deapool         Comedia              2015                                                                                                                                                          
+
+SQL> start 3
+SQL> SELECT v.nombre, a.nombreArtistico "Nombre Artistico"
+  2  FROM videosmusicales v
+  3  JOIN artistas a on (v.idartista = a.id)
+  4  order by a.nombreArtistico
+  5  /
+
+NOMBRE               Nombre Artistico                                                                                                                                                                   
+-------------------- --------------------                                                                                                                                                               
+Powderfinger         Diddy                                                                                                                                                                              
+Sing                 Diddy                                                                                                                                                                              
+Firefly              Dr. Dre                                                                                                                                                                            
+Space Oddity         Dr. Dre                                                                                                                                                                            
+Kiss Me              Dr. Dre                                                                                                                                                                            
+Thinking Out Loud    Dr. Dre                                                                                                                                                                            
+Hearts do not break  Gene Simmons                                                                                                                                                                       
+around here                                                                                                                                                                                             
+                                                                                                                                                                                                        
+American Tune        Gwen Stefani                                                                                                                                                                       
+Tenerife Sea         Gwen Stefani                                                                                                                                                                       
+
+NOMBRE               Nombre Artistico                                                                                                                                                                   
+-------------------- --------------------                                                                                                                                                               
+How Would You Feel   Jay-Z                                                                                                                                                                              
+Lego House           Jay-Z                                                                                                                                                                              
+Perfect              Paul McCartney                                                                                                                                                                     
+What is Going On     Paul McCartney                                                                                                                                                                     
+Photograph           Trent Reznor                                                                                                                                                                       
+Sweet Jane           Trent Reznor                                                                                                                                                                       
+
+15 rows selected.
+
+SQL> start 4
+SQL> SELECT v.nombre, g.tipo "Genero musical"
+  2  FROM videosmusicales v
+  3  JOIN generos g on (g.tipo = v.idgenero)
+  4  order by g.tipo
+  5  /
+
+NOMBRE               Genero musical                                                                                                                                                                     
+-------------------- --------------------                                                                                                                                                               
+Perfect              Bosa Nova                                                                                                                                                                          
+How Would You Feel   Celta                                                                                                                                                                              
+American Tune        Cl sica                                                                                                                                                                            
+Lego House           Cl sica                                                                                                                                                                            
+Tenerife Sea         Corrido                                                                                                                                                                            
+Thinking Out Loud    Country                                                                                                                                                                            
+Sing                 Country                                                                                                                                                                            
+What is Going On     Criollo                                                                                                                                                                            
+Hearts do not break  Criollo                                                                                                                                                                            
+around here                                                                                                                                                                                             
+                                                                                                                                                                                                        
+
+NOMBRE               Genero musical                                                                                                                                                                     
+-------------------- --------------------                                                                                                                                                               
+Kiss Me              Funk                                                                                                                                                                               
+Sweet Jane           Funk                                                                                                                                                                               
+Firefly              Garage Rock                                                                                                                                                                        
+Powderfinger         Garage Rock                                                                                                                                                                        
+Space Oddity         Gospel                                                                                                                                                                             
+Photograph           Gospel                                                                                                                                                                             
+
+15 rows selected.
+
+SQL> start 5
+SQL> SELECT c.nombre, count(1) "descargas"
+  2  FROM clientes c
+  3  JOIN descargas d on (c.id = d.idcliente)
+  4  group by c.nombre
+  5  /
+
+NOMBRE                descargas                                                                                                                                                                         
+-------------------- ----------                                                                                                                                                                         
+Fernando                     47                                                                                                                                                                         
+Bianca                       53                                                                                                                                                                         
+
+SQL> start 6
+SQL> SELECT titulo, cantidad
+  2  FROM (SELECT p.titulo, count(1) cantidad
+  3  	     FROM descargas d
+  4  	     JOIN formatopelicula f on (f.id = d.IDFORMATOPELICULA)
+  5  	     JOIN peliculas p on (p.id = f.idpelicula)
+  6  	     group by p.titulo
+  7  	     order by cantidad desc)
+  8  WHERE rownum <= 5
+  9  /
+
+TITULO                           CANTIDAD                                                                                                                                                               
+------------------------------ ----------                                                                                                                                                               
+One Cut of The Dead                     6                                                                                                                                                               
+Mudbound                                3                                                                                                                                                               
+Tierra de Dios                          3                                                                                                                                                               
+Your Name                               2                                                                                                                                                               
+Caras y lugares                         2                                                                                                                                                               
+
+SQL> start 7
+SQL> SELECT titulo, reproducciones, serie, temporada, numero "# episodio"
+  2  FROM (SELECT e.titulo, count(1) reproducciones, s.titulo serie, t.numeroTemporada temporada, e.numero
+  3  	     from reproducciones r
+  4  	     JOIN episodios e on (r.idepisodio = e.id)
+  5  	     JOIN temporadas t on (t.id = e.idtemporada)
+  6  	     JOIN series s on (s.id = t.idSerie)
+  7  	     group by e.titulo, s.titulo, t.numeroTemporada, e.numero
+  8  	     order by reproducciones desc)
+  9  WHERE rownum <= 6
+ 10  /
+
+TITULO                         REPRODUCCIONES SERIE                TEMPORADA  # episodio                                                                                                                
+------------------------------ -------------- -------------------- ---------- ----------                                                                                                                
+Una corona de oro                           4 Breaking Bad         1          4                                                                                                                         
+Por el lado de la punta                     3 Vikingos             1          3                                                                                                                         
+Ganas o mueres                              3 Vikingos             1          2                                                                                                                         
+El Camino Real                              2 Juego de Tronos      1          4                                                                                                                         
+Piloto                                      2 Chernobyl            1          1                                                                                                                         
+Piloto                                      1 Juego de Tronos      1          1                                                                                                                         
+
+6 rows selected.
+
+SQL> start 8
+SQL> SELECT g.tipo,
+  2  	     (SELECT count(1)
+  3  	     from audiolibro a
+  4  	     WHERE a.idgenero = g.tipo) "Audio Libro",
+  5  	     (SELECT count(1)
+  6  	     from peliculas p
+  7  	     WHERE p.idgenero = g.tipo) "Peliculas",
+  8  	     (SELECT count(1)
+  9  	     from series s
+ 10  	     WHERE s.idgenero = g.tipo) "Series",
+ 11  	     (SELECT count(1)
+ 12  	     from documentales d
+ 13  	     WHERE d.idgenero = g.tipo) "Documentales",
+ 14  	     (SELECT count(1)
+ 15  	     from videosmusicales v
+ 16  	     WHERE v.idgenero = g.tipo) "Videos Musicales",
+ 17  	     (SELECT count(1)
+ 18  	     from tansmicionesenvivo t
+ 19  	     WHERE t.idgenero = g.tipo) "Transmiciones en vivo"
+ 20  FROM generos g
+ 21  group by g.tipo
+ 22  /
+
+TIPO                 Audio Libro  Peliculas     Series Documentales Videos Musicales Transmiciones en vivo                                                                                              
+-------------------- ----------- ---------- ---------- ------------ ---------------- ---------------------                                                                                              
+Bachata                        0          0          0            0                0                     0                                                                                              
+Baladas                        0          0          0            0                0                     0                                                                                              
+Blues                          0          0          0            0                0                     0                                                                                              
+Bolero                         0          0          0            0                0                     0                                                                                              
+Bosa Nova                      0          0          0            0                1                     0                                                                                              
+Celta                          0          0          0            0                1                     1                                                                                              
+Cl sica                        0          0          0            0                2                     2                                                                                              
+Comedia                        3          8          1            0                0                     0                                                                                              
+Comedia Negra                  2          2          1            0                0                     0                                                                                              
+Comedia Rom ntica              2          2          2            0                0                     0                                                                                              
+Corrido                        0          0          0            0                1                     1                                                                                              
+
+TIPO                 Audio Libro  Peliculas     Series Documentales Videos Musicales Transmiciones en vivo                                                                                              
+-------------------- ----------- ---------- ---------- ------------ ---------------- ---------------------                                                                                              
+Country                        0          0          0            0                2                     2                                                                                              
+Criollo                        0          0          0            0                2                     1                                                                                              
+Cumbia                         0          0          0            0                0                     1                                                                                              
+Disco                          0          0          0            0                0                     0                                                                                              
+Dubstep                        0          0          0            0                0                     0                                                                                              
+Electr¢nica                    0          0          0            0                0                     0                                                                                              
+Flamenco                       0          0          0            0                0                     0                                                                                              
+Folk                           0          0          0            0                0                     0                                                                                              
+Funk                           0          0          0            0                2                     0                                                                                              
+Garage Rock                    0          0          0            0                2                     0                                                                                              
+Gore                           2          2          2            6                0                     0                                                                                              
+
+TIPO                 Audio Libro  Peliculas     Series Documentales Videos Musicales Transmiciones en vivo                                                                                              
+-------------------- ----------- ---------- ---------- ------------ ---------------- ---------------------                                                                                              
+Gospel                         0          0          0            0                2                     0                                                                                              
+Heavy Metal                    0          0          0            0                0                     0                                                                                              
+Telenovela                     2          2          1            0                0                     0                                                                                              
+Terror                         1          1          2            0                0                     0                                                                                              
+Thriller                       2          2          0            0                0                     0                                                                                              
+Thriller Gangster o            1          1          0            0                0                     0                                                                                              
+de mafia                                                                                                                                                                                                
+                                                                                                                                                                                                        
+Thriller Inform tico           1          1          0            0                0                     0                                                                                              
+Thriller Legal o jur           1          1          0            0                0                     0                                                                                              
+¡dico                                                                                                                                                                                                   
+
+TIPO                 Audio Libro  Peliculas     Series Documentales Videos Musicales Transmiciones en vivo                                                                                              
+-------------------- ----------- ---------- ---------- ------------ ---------------- ---------------------                                                                                              
+                                                                                                                                                                                                        
+Thriller Psicol¢gico           1          1          0            0                0                     0                                                                                              
+Thriller policiaco             1          1          1            0                0                     0                                                                                              
+Thriller pol¡tico              1          1          0            0                0                     0                                                                                              
+
+33 rows selected.
+
+SQL> spool off

@@ -1,0 +1,1 @@
+ALTER TABLE descargas ADD CONSTRAINT descargas_pk PRIMARY KEY ( id );

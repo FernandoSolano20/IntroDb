@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RepartoSerie Series FK" directorySegmentName="seg_0" id="B98481E6-47B8-41CC-9DAC-6B78BDCC564E">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:10:08 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>69742A04-7A2E-B518-3FDA-108E862AE3C0</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2025F213-6511-3058-ADAA-D389E16E5FBF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EC62B094-7EC3-6E7B-D384-DBD5804AFE09</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

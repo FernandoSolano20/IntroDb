@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ArtistaTransmicion TansmicionesEnVivo FK" directorySegmentName="seg_0" id="C70188B0-01F0-A60D-3D00-3DC646CA775B">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:38:46 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>F6DBB8D1-61EF-D203-F7FB-94239460613C</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6CDA5B92-2857-5CBD-D568-E14212F96BFE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F7C55706-915D-0DA1-875A-27A398FBB712</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

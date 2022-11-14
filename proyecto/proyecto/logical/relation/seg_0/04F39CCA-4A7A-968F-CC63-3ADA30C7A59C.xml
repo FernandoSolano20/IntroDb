@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Series Clasificaciones FK" directorySegmentName="seg_0" id="04F39CCA-4A7A-968F-CC63-3ADA30C7A59C">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:12:13 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>DB0DC859-F1DA-077A-8FD1-D87FED81B465</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>885EB2BF-E907-AF2D-DAE6-980256CD5915</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2025F213-6511-3058-ADAA-D389E16E5FBF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="4523BF97-1A34-8A1C-D75B-48E1A7610D56" containerWithKeyObject="44919CE6-300A-8E61-9E00-02FA0F830ED1" localFKIndex="4F138D45-502C-316C-227B-3E3866345E5C" name="series_clasificaciones">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>04F39CCA-4A7A-968F-CC63-3ADA30C7A59C</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>Clasificaciones</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8B0758E3-625D-35A5-51E5-CCEE1DC72D24</referredTableID>
+<keyObject>94BFB0BC-FE83-7D68-2FA7-E65C3A25DFD1</keyObject>
+<referredKeyID>94BFB0BC-FE83-7D68-2FA7-E65C3A25DFD1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>tipoClasificacion</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

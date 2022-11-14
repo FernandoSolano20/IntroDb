@@ -1,0 +1,31 @@
+SQL> start tarea4
+SQL> select nombre, apellido, dianacimiento, subalternos, subalternas
+  2  from (select jefe.nombre, jefe.apellido,  sum(case sub.sexo
+  3  						 when 'M' THEN 1
+  4  						 ELSE 0
+  5  						 END) subalternos,
+  6  					     sum(case sub.sexo
+  7  						 when 'F' THEN 1
+  8  						 ELSE 0
+  9  						 END) subalternas,
+ 10  		 jefe.dianacimiento
+ 11  	     from empleados sub
+ 12  	     join empleados jefe on (sub.idjefe = jefe.idemp)
+ 13  	     where sub.idjefe is not null
+ 14  	     group by sub.idjefe, jefe.nombre, jefe.apellido, jefe.dianacimiento
+ 15  	     order by dianacimiento desc
+ 16  	     )
+ 17  where rownum <= 5
+ 18  /
+
+NOMBRE               APELLIDO                  DIANACIMIENTO   SUBALTERNOS SUBALTERNAS              
+-------------------- ------------------------- --------------- ----------- -----------              
+JAIME                ROSETTI                   15-APR-93                 8          17              
+EZEQUIEL             PIREZ                     01-APR-93                 4           5              
+EMILIANO             MARTIN                    28-DEC-89                 2           1              
+GABRIEL              NOLOSA                    11-AUG-86                12           6              
+ETO                  DEMERZEL                  06-JAN-85                 3           2              
+
+5 rows selected.
+
+SQL> spool off

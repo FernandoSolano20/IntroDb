@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF27908E-1EF4-ADBD-6109-04059278A13F" name="FormatoVideoMusical">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contiene el formato de video musical]]></commentInRDBMS>
+<generatorID>D44FA3DF-6840-0F89-0EC8-E861555BBABD</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="09952391-0F92-9096-0DEC-8C1038FF2BE1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Llave primaria de formato de video musicales]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="idVideosMusical" id="08081EB4-504D-06B1-7D91-8D258AF0DCE4">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del video musical]]></commentInRDBMS>
+<generatorID>32088FE2-1ACE-C1ED-517F-672D95049107</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8F5CA262-6E71-8289-3BDE-E2B20F0E465E" referredColumn="BC2A7B05-FC29-CDB2-E84F-0FC978E81FFD"/>
+</associations>
+</Column>
+<Column name="formato" id="80314C4A-FC2B-74D9-2104-002A0F0BBD1D">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato]]></commentInRDBMS>
+<generatorID>E596DD0E-292D-06FF-E96F-0A5753F6B7A3</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<domain>9E65350E-0380-5240-DB2E-E05322D46046</domain>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83377DCC-0DBF-D759-2114-C9E208563532" referredColumn="EF0EF921-5A52-42DE-0C7B-36C531E21C0C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="987D0F1A-EE87-BC45-86DD-6DDB331B58B5" name="FormatoVideoMusical_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="09952391-0F92-9096-0DEC-8C1038FF2BE1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F9D0186E-EA37-2453-5DC0-59FA16CB6055" name="idFormatVideoMusical">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>5CC39673-7F33-3DC2-D6C0-DCFD8BF98891</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="80314C4A-FC2B-74D9-2104-002A0F0BBD1D"/>
+<colUsage columnID="08081EB4-504D-06B1-7D91-8D258AF0DCE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D2D1F71-E124-658D-7923-6DDA8BE11647" name="formatos_videomusical">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>A3AFAC41-D49C-0753-4AF3-646E7340C1DE</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="80314C4A-FC2B-74D9-2104-002A0F0BBD1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3EB92383-0FC2-82AA-FAA4-98D440E97BBD" name="formatos_videomusical2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>B18687E7-EE83-FFD4-E181-4A43EA429928</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08081EB4-504D-06B1-7D91-8D258AF0DCE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

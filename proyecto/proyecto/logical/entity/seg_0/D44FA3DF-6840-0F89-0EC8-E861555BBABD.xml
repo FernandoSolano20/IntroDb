@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D44FA3DF-6840-0F89-0EC8-E861555BBABD" name="FormatoVideoMusical">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:59:11 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="VideosMusicales id" id="32088FE2-1ACE-C1ED-517F-672D95049107">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:59:37 UTC</createdTime>
+<generatorID>B18687E7-EE83-FFD4-E181-4A43EA429928</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>6B48D6B2-489C-4E2E-DAEF-EA27145B7A34</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Formatos formato" id="E596DD0E-292D-06FF-E96F-0A5753F6B7A3">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:59:45 UTC</createdTime>
+<generatorID>A3AFAC41-D49C-0753-4AF3-646E7340C1DE</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>11267F70-B753-8221-1403-76F79B4BC5EC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5CC39673-7F33-3DC2-D6C0-DCFD8BF98891" name="FormatoVideoMusical_Formatos_formato_VideosMusicales_id_UN">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:25:17 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E596DD0E-292D-06FF-E96F-0A5753F6B7A3</attributeRef>
+<attributeRef>32088FE2-1ACE-C1ED-517F-672D95049107</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

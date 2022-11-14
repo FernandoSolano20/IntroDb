@@ -1,0 +1,3 @@
+CREATE TABLE generos (
+    tipo VARCHAR2(250) NOT NULL
+);

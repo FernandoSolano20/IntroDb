@@ -1,0 +1,175 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F7F520D-9D98-D85F-D229-95FE665E461F" name="Episodios">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla de episodios]]></commentInRDBMS>
+<generatorID>308CF390-690B-812B-09B1-0C99A1737C02</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="973A7428-0CB2-73F4-747A-48FFA7D3A992">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[LLave primaria de episodios]]></commentInRDBMS>
+<generatorID>56C2172F-9502-0D43-4F13-DD008C1CA934</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="51A5329D-4628-11BD-B344-765B29F86EAE">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de episodio]]></commentInRDBMS>
+<generatorID>09DA1EF0-4E07-7169-3F25-AD08A42DA41A</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>145E2188-B2E9-877A-D4A0-3F4500E283D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numero" id="CCDF2539-0291-E3E6-2A25-E973976AE882">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Numero de episodio]]></commentInRDBMS>
+<generatorID>B3129A77-F8B2-F2AF-F83F-EA345C1DAFCD</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<domain>9E65350E-0380-5240-DB2E-E05322D46046</domain>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="titulo" id="A8BA03C4-9F3F-49EF-756D-7D969D21775E">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Titulo de episodio]]></commentInRDBMS>
+<generatorID>8273569D-A268-64B8-14AE-DA4F129C7099</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<domain>DA62A35A-EA73-182D-08A8-F166847DC236</domain>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>true</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora" id="E8455E57-F64A-A786-9FD8-BF20B296644F">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Duracion de hora]]></commentInRDBMS>
+<generatorID>9C5EC0D8-FCA9-AF1C-7FBE-2EA5EC887C79</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<domain>63C61E5F-52FD-46A4-1602-BC8748546834</domain>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="minutos" id="3AE2B74D-74CD-B7A7-05C0-FE81BDA46358">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Duracion en minutos]]></commentInRDBMS>
+<generatorID>61A6404C-18AB-3522-B248-F82F7478FBE0</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<domain>63C61E5F-52FD-46A4-1602-BC8748546834</domain>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="segundos" id="8502F03D-8114-6715-8B3A-D7799A3257BE">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Duracion en segundos]]></commentInRDBMS>
+<generatorID>64094897-BA77-E5E7-7CB7-82DF0243840C</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<domain>63C61E5F-52FD-46A4-1602-BC8748546834</domain>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idTemporada" id="20D2E600-DB7B-7B68-26B7-70564EEC549F">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion de temporadas]]></commentInRDBMS>
+<generatorID>E56122A0-CC3D-A8FD-557D-D8E938B91FC3</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0DE94EC7-1288-7171-A9AA-E9E7681C3D86" referredColumn="E3A8D6EB-C185-5F91-42B0-26D0B952EECF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D307AF2B-9287-E5FB-D98D-D46A373B8810" name="Episodios_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>0AB31ACE-BB7E-72EC-9C87-0B2FEE72F914</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="973A7428-0CB2-73F4-747A-48FFA7D3A992"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E996587E-79E6-AE5E-E300-A9DCEF9D9785" name="temporadas_serie">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>D96EA06F-FCF2-D39D-EA74-A48CB79EBD1A</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20D2E600-DB7B-7B68-26B7-70564EEC549F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

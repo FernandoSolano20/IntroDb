@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="68A7D588-D51A-C26D-3D47-14D61B38B64F" name="Generos">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contiene los generos musicales y literarios]]></commentInRDBMS>
+<generatorID>E4B0CE7F-41D2-F06C-2039-D2E05B9E876F</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipo" id="DDB52E62-BF42-523B-9489-66DFEF1DF24B">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo de genero]]></commentInRDBMS>
+<generatorID>140E9EA8-E6FC-7841-CB05-8200CA205253</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<domain>DA62A35A-EA73-182D-08A8-F166847DC236</domain>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>true</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C8F4B843-CD53-14F1-5017-7E12CD7D568A" name="Generos_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>E6199FC1-8191-4F9F-C2C4-D594C287075E</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDB52E62-BF42-523B-9489-66DFEF1DF24B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

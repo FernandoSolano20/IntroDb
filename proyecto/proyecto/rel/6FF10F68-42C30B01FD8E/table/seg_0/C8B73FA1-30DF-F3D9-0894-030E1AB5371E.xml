@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C8B73FA1-30DF-F3D9-0894-030E1AB5371E" name="ArtistaTransmicion">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla de artista por transmicion]]></commentInRDBMS>
+<generatorID>F7C55706-915D-0DA1-875A-27A398FBB712</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idArtista" id="484E47ED-C2C7-56DA-E2F9-2C5CEAACD561">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del artista]]></commentInRDBMS>
+<generatorID>0F728A29-4DF7-FEDB-09C6-E119F88FFADB</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="114C3CAD-C970-1B20-A09D-FCDBB19ADA08" referredColumn="9635EE82-C6B7-B0A5-5E4B-8BE0AA45A418"/>
+</associations>
+</Column>
+<Column name="idTansmicionesEnVivo" id="81658E15-ACFC-E775-3C1F-7812146F6EF7">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del transmicion en vivo]]></commentInRDBMS>
+<generatorID>8EFD8E1E-60B3-4A92-A1AA-01F39FCF522A</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58B34DA0-15EE-7DC7-9E04-F6A3FB9E190F" referredColumn="2EBC3A37-B26A-631B-260D-94E05A51289C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C5E44DF-502D-567B-52F9-87A4F4B05CEC" name="ArtistaTransmicion_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>8B8E5740-232F-7AF0-CCFF-00A99C34EC8D</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="484E47ED-C2C7-56DA-E2F9-2C5CEAACD561"/>
+<colUsage columnID="81658E15-ACFC-E775-3C1F-7812146F6EF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A07A9D1-2290-5C64-71EF-92475DDCA8A8" name="artistas_Transmicion">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>C8FB20BC-D61C-2280-8E67-809EF9464B28</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="484E47ED-C2C7-56DA-E2F9-2C5CEAACD561"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="450A5CBC-7888-0CC7-E08D-DEDCDB02730D" name="artistas_Transmicion2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>C70188B0-01F0-A60D-3D00-3DC646CA775B</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="81658E15-ACFC-E775-3C1F-7812146F6EF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

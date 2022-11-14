@@ -1,0 +1,604 @@
+CREATE TABLE artistas (
+    id               INTEGER NOT NULL,
+    nombre           VARCHAR2(250) NOT NULL,
+    apellido         VARCHAR2(250) NOT NULL,
+    nombreartistico  VARCHAR2(250) NOT NULL,
+    fechanacimeinto  DATE NOT NULL,
+    fechainicio      DATE NOT NULL,
+    idpais           CHAR(2) NOT NULL,
+    idgenero         VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE artistas ADD CONSTRAINT artistas_pk PRIMARY KEY ( id );
+
+CREATE TABLE artistatipoartista (
+    idartista      INTEGER NOT NULL,
+    idtipoartista  VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE artistatipoartista ADD CONSTRAINT artistatipoartista_pk PRIMARY KEY ( idartista,
+                                                                                  idtipoartista );
+
+CREATE TABLE artistatransmicion (
+    idartista             INTEGER NOT NULL,
+    idtansmicionesenvivo  INTEGER NOT NULL
+);
+
+ALTER TABLE artistatransmicion ADD CONSTRAINT artistatransmicion_pk PRIMARY KEY ( idartista,
+                                                                                  idtansmicionesenvivo );
+
+CREATE TABLE audiolibro (
+    id               INTEGER NOT NULL,
+    titulo           VARCHAR2(250) NOT NULL,
+    autor            VARCHAR2(250) NOT NULL,
+    hora             VARCHAR2(2) NOT NULL,
+    minutos          VARCHAR2(2),
+    segundos         VARCHAR2(2) NOT NULL,
+    fecha            DATE NOT NULL,
+    numerocapitulos  VARCHAR2(3) NOT NULL,
+    editorial        VARCHAR2(250) NOT NULL,
+    audio            VARCHAR2(100)
+);
+
+ALTER TABLE audiolibro ADD CONSTRAINT audiolibro_pk PRIMARY KEY ( id );
+
+CREATE TABLE clasificaciones (
+    tipoclasificacion VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE clasificaciones ADD CONSTRAINT clasificaciones_pk PRIMARY KEY ( tipoclasificacion );
+
+CREATE TABLE cliente_formadepago (
+    idcliente  INTEGER NOT NULL,
+    tipopago   VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE cliente_formadepago ADD CONSTRAINT cliente_formadepago_pk PRIMARY KEY ( idcliente,
+                                                                                    tipopago );
+
+CREATE TABLE clientes (
+    id               INTEGER NOT NULL,
+    nombre           VARCHAR2(250) NOT NULL,
+    apellido         VARCHAR2(250) NOT NULL,
+    direccion        VARCHAR2(250) NOT NULL,
+    telefono         VARCHAR2(20) NOT NULL,
+    fechanacimiento  DATE NOT NULL,
+    email            VARCHAR2(100) NOT NULL,
+    claveacceso      VARCHAR2(10) NOT NULL,
+    profesion        VARCHAR2(250) NOT NULL,
+    fechamembresia   DATE NOT NULL,
+    idpais           CHAR(2) NOT NULL,
+    idgenero         VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE clientes ADD CONSTRAINT clientes_pk PRIMARY KEY ( id );
+
+CREATE TABLE descargas (
+    id                    INTEGER NOT NULL,
+    fechainicio           DATE NOT NULL,
+    idformatomusical      NUMBER,
+    idformatodocumental   NUMBER,
+    idformatotransmicion  NUMBER,
+    idformatoserie        NUMBER,
+    idformatoaudiolibro   NUMBER,
+    idformatopelicula     NUMBER
+);
+
+ALTER TABLE descargas ADD CONSTRAINT descargas_pk PRIMARY KEY ( id );
+
+CREATE TABLE documentales (
+    id        INTEGER NOT NULL,
+    titulo    VARCHAR2(250) NOT NULL,
+    anno      DATE NOT NULL,
+    idgenero  VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE documentales ADD CONSTRAINT documentales_pk PRIMARY KEY ( id );
+
+CREATE TABLE episodios (
+    id           INTEGER NOT NULL,
+    fecha        DATE NOT NULL,
+    numero       VARCHAR2(10) NOT NULL,
+    titulo       VARCHAR2(250) NOT NULL,
+    hora         VARCHAR2(2) NOT NULL,
+    minutos      VARCHAR2(2) NOT NULL,
+    segundos     VARCHAR2(2) NOT NULL,
+    idtemporada  INTEGER NOT NULL
+);
+
+ALTER TABLE episodios ADD CONSTRAINT episodios_pk PRIMARY KEY ( id );
+
+CREATE TABLE formasdepago (
+    tipopago VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE formasdepago ADD CONSTRAINT formasdepago_pk PRIMARY KEY ( tipopago );
+
+CREATE TABLE formatoaudiolibro (
+    id            NUMBER NOT NULL,
+    formato       VARCHAR2(10) NOT NULL,
+    idaudiolibro  INTEGER NOT NULL
+);
+
+ALTER TABLE formatoaudiolibro ADD CONSTRAINT formatoaudiolibro_pk PRIMARY KEY ( id );
+
+ALTER TABLE formatoaudiolibro ADD CONSTRAINT audiolibroformatos_formato UNIQUE ( idaudiolibro,
+                                                                                                          formato );
+
+CREATE TABLE formatodocumentales (
+    id            NUMBER NOT NULL,
+    idformato     VARCHAR2(10) NOT NULL,
+    iddocumental  INTEGER NOT NULL
+);
+
+ALTER TABLE formatodocumentales ADD CONSTRAINT formatodocumentales_pk PRIMARY KEY ( id );
+
+ALTER TABLE formatodocumentales ADD CONSTRAINT formatosdocumental UNIQUE ( idformato,
+                                                                                                                iddocumental );
+
+CREATE TABLE formatopelicula (
+    id          NUMBER NOT NULL,
+    idpelicula  INTEGER NOT NULL,
+    idformato   VARCHAR2(10) NOT NULL
+);
+
+ALTER TABLE formatopelicula ADD CONSTRAINT formatopelicula_pk PRIMARY KEY ( id );
+
+ALTER TABLE formatopelicula ADD CONSTRAINT formatos_peliculas UNIQUE ( idformato,
+                                                                                                     idpelicula );
+
+CREATE TABLE formatos (
+    formato VARCHAR2(10) NOT NULL
+);
+
+ALTER TABLE formatos ADD CONSTRAINT formatos_pk PRIMARY KEY ( formato );
+
+CREATE TABLE formatoserie (
+    id         NUMBER NOT NULL,
+    idserie    INTEGER NOT NULL,
+    idformato  VARCHAR2(10) NOT NULL
+);
+
+ALTER TABLE formatoserie ADD CONSTRAINT formatoserie_pk PRIMARY KEY ( id );
+
+ALTER TABLE formatoserie ADD CONSTRAINT formato_series UNIQUE ( idformato,
+                                                                                            idserie );
+
+CREATE TABLE formatotransmicion (
+    id                    NUMBER NOT NULL,
+    idtansmicionesenvivo  INTEGER NOT NULL,
+    formato               VARCHAR2(10) NOT NULL
+);
+
+ALTER TABLE formatotransmicion ADD CONSTRAINT formatotransmicion_pk PRIMARY KEY ( id );
+
+ALTER TABLE formatotransmicion ADD CONSTRAINT idtransmicionformato UNIQUE ( formato,
+                                                                                                                    idtansmicionesenvivo );
+
+CREATE TABLE formatovideomusical (
+    id               NUMBER NOT NULL,
+    idvideosmusical  INTEGER NOT NULL,
+    formato          VARCHAR2(10) NOT NULL
+);
+
+ALTER TABLE formatovideomusical ADD CONSTRAINT formatovideomusical_pk PRIMARY KEY ( id );
+
+ALTER TABLE formatovideomusical ADD CONSTRAINT idformatvideomusical UNIQUE ( formato,
+                                                                                                                   idvideosmusical );
+
+CREATE TABLE generos (
+    tipo VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE generos ADD CONSTRAINT generos_pk PRIMARY KEY ( tipo );
+
+CREATE TABLE paises (
+    id      CHAR(2) NOT NULL,
+    nombre  VARCHAR2(40) NOT NULL
+);
+
+ALTER TABLE paises ADD CONSTRAINT paises_pk PRIMARY KEY ( id );
+
+CREATE TABLE peliculagenero (
+    idgenero    VARCHAR2(250) NOT NULL,
+    idpelicula  INTEGER NOT NULL
+);
+
+ALTER TABLE peliculagenero ADD CONSTRAINT peliculagenero_pk PRIMARY KEY ( idpelicula,
+                                                                          idgenero );
+
+CREATE TABLE peliculas (
+    id                   INTEGER NOT NULL,
+    titulo               VARCHAR2(250) NOT NULL,
+    anno                 DATE NOT NULL,
+    estudio              VARCHAR2(300) NOT NULL,
+    hora                 VARCHAR2(1) NOT NULL,
+    minuto               VARCHAR2(2) NOT NULL,
+    segundo              VARCHAR2(2) NOT NULL,
+    idpais               CHAR(2) NOT NULL,
+    idartista            INTEGER NOT NULL,
+    idtipoclasificacion  VARCHAR2(250) NOT NULL,
+    idsaga               INTEGER
+);
+
+ALTER TABLE peliculas ADD CONSTRAINT peliculas_pk PRIMARY KEY ( id );
+
+CREATE TABLE repartoserie (
+    idserie    INTEGER NOT NULL,
+    idartista  INTEGER NOT NULL
+);
+
+ALTER TABLE repartoserie ADD CONSTRAINT repartoserie_pk PRIMARY KEY ( idserie,
+                                                                      idartista );
+
+CREATE TABLE repartospelicula (
+    idartista   INTEGER NOT NULL,
+    idpelicula  INTEGER NOT NULL
+);
+
+ALTER TABLE repartospelicula ADD CONSTRAINT repartospelicula_pk PRIMARY KEY ( idpelicula,
+                                                                              idartista );
+
+CREATE TABLE reproducciones (
+    id                    INTEGER NOT NULL,
+    fechainicio           DATE NOT NULL,
+    estadoactual          CHAR(1) NOT NULL,
+    ultimosegundo         VARCHAR2(2) NOT NULL,
+    idcliente             INTEGER NOT NULL,
+    idaudiolibro          INTEGER,
+    idtansmicionesenvivo  INTEGER,
+    idvideosmusical       INTEGER,
+    iddocumental          INTEGER,
+    idserie               INTEGER,
+    idpelicula            INTEGER
+);
+
+ALTER TABLE reproducciones ADD CONSTRAINT reproducciones_pk PRIMARY KEY ( id );
+
+CREATE TABLE sagas (
+    id            INTEGER NOT NULL,
+    sagapelicula  VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE sagas ADD CONSTRAINT sagas_pk PRIMARY KEY ( id );
+
+CREATE TABLE series (
+    id                   INTEGER NOT NULL,
+    anno                 DATE NOT NULL,
+    estudio              VARCHAR2(250),
+    idpais               CHAR(2) NOT NULL,
+    idgenero             VARCHAR2(250) NOT NULL,
+    idartista            INTEGER NOT NULL,
+    idtipoclasificacion  VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE series ADD CONSTRAINT series_pk PRIMARY KEY ( id );
+
+CREATE TABLE sexos (
+    genero VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE sexos ADD CONSTRAINT sexos_pk PRIMARY KEY ( genero );
+
+CREATE TABLE tansmicionesenvivo (
+    id        INTEGER NOT NULL,
+    titulo    VARCHAR2(250) NOT NULL,
+    fecha     DATE NOT NULL,
+    hora      VARCHAR2(2) NOT NULL,
+    minutos   VARCHAR2(2) NOT NULL,
+    segundos  VARCHAR2(2) NOT NULL
+);
+
+ALTER TABLE tansmicionesenvivo ADD CONSTRAINT tansmicionesenvivo_pk PRIMARY KEY ( id );
+
+CREATE TABLE temporadas (
+    id               INTEGER NOT NULL,
+    numerotemporada  VARCHAR2(10) NOT NULL,
+    idserie          INTEGER NOT NULL
+);
+
+ALTER TABLE temporadas ADD CONSTRAINT temporadas_pk PRIMARY KEY ( id );
+
+CREATE TABLE tipomusical (
+    tipomusica VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE tipomusical ADD CONSTRAINT tipomusical_pk PRIMARY KEY ( tipomusica );
+
+CREATE TABLE tiposartistas (
+    tipo VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE tiposartistas ADD CONSTRAINT tiposartistas_pk PRIMARY KEY ( tipo );
+
+CREATE TABLE videosmusicales (
+    id            INTEGER NOT NULL,
+    hora          VARCHAR2(1) NOT NULL,
+    minutos       VARCHAR2(2) NOT NULL,
+    segundos      VARCHAR2(2) NOT NULL,
+    lirica        VARCHAR2(10000),
+    musica        VARCHAR2(250),
+    idtipomusica  VARCHAR2(250) NOT NULL
+);
+
+ALTER TABLE videosmusicales ADD CONSTRAINT videosmusicales_pk PRIMARY KEY ( id );
+
+ALTER TABLE peliculas
+    ADD CONSTRAINT artisatas FOREIGN KEY ( idartista )
+        REFERENCES artistas ( id );
+
+ALTER TABLE artistatipoartista
+    ADD CONSTRAINT artista FOREIGN KEY ( idartista )
+        REFERENCES artistas ( id );
+
+ALTER TABLE repartospelicula
+    ADD CONSTRAINT artistas FOREIGN KEY ( idartista )
+        REFERENCES artistas ( id );
+
+ALTER TABLE repartoserie
+    ADD CONSTRAINT artistasv1 FOREIGN KEY ( idartista )
+        REFERENCES artistas ( id );
+
+--  ERROR: FK name length exceeds maximum allowed length(30) 
+ALTER TABLE artistatipoartista
+    ADD CONSTRAINT artistatipoartista_tiposartistas_fk FOREIGN KEY ( idtipoartista )
+        REFERENCES tiposartistas ( tipo );
+
+ALTER TABLE series
+    ADD CONSTRAINT artistav1 FOREIGN KEY ( idartista )
+        REFERENCES artistas ( id );
+
+ALTER TABLE artistatransmicion
+    ADD CONSTRAINT artistrans FOREIGN KEY ( idtansmicionesenvivo )
+        REFERENCES tansmicionesenvivo ( id );
+
+ALTER TABLE formatoaudiolibro
+    ADD CONSTRAINT audiolibro FOREIGN KEY ( idaudiolibro )
+        REFERENCES audiolibro ( id );
+
+ALTER TABLE peliculas
+    ADD CONSTRAINT clasifi FOREIGN KEY ( idtipoclasificacion )
+        REFERENCES clasificaciones ( tipoclasificacion );
+
+ALTER TABLE series
+    ADD CONSTRAINT clasifiv1 FOREIGN KEY ( idtipoclasificacion )
+        REFERENCES clasificaciones ( tipoclasificacion );
+
+ALTER TABLE reproducciones
+    ADD CONSTRAINT cliente FOREIGN KEY ( idcliente )
+        REFERENCES clientes ( id );
+
+ALTER TABLE cliente_formadepago
+    ADD CONSTRAINT clientev1 FOREIGN KEY ( idcliente )
+        REFERENCES clientes ( id );
+
+ALTER TABLE descargas
+    ADD CONSTRAINT des FOREIGN KEY ( idformatoaudiolibro )
+        REFERENCES formatoaudiolibro ( id );
+
+ALTER TABLE descargas
+    ADD CONSTRAINT desv1 FOREIGN KEY ( idformatoserie )
+        REFERENCES formatoserie ( id );
+
+ALTER TABLE descargas
+    ADD CONSTRAINT desv2 FOREIGN KEY ( idformatodocumental )
+        REFERENCES formatodocumentales ( id );
+
+ALTER TABLE descargas
+    ADD CONSTRAINT desv3 FOREIGN KEY ( idformatotransmicion )
+        REFERENCES formatotransmicion ( id );
+
+ALTER TABLE descargas
+    ADD CONSTRAINT desv4 FOREIGN KEY ( idformatopelicula )
+        REFERENCES formatopelicula ( id );
+
+ALTER TABLE descargas
+    ADD CONSTRAINT desv5 FOREIGN KEY ( idformatomusical )
+        REFERENCES formatovideomusical ( id );
+
+ALTER TABLE formatodocumentales
+    ADD CONSTRAINT documental FOREIGN KEY ( iddocumental )
+        REFERENCES documentales ( id );
+
+ALTER TABLE formatotransmicion
+    ADD CONSTRAINT formato FOREIGN KEY ( formato )
+        REFERENCES formatos ( formato );
+
+ALTER TABLE formatopelicula
+    ADD CONSTRAINT formatov1 FOREIGN KEY ( idformato )
+        REFERENCES formatos ( formato );
+
+ALTER TABLE formatoaudiolibro
+    ADD CONSTRAINT formatov2 FOREIGN KEY ( formato )
+        REFERENCES formatos ( formato );
+
+ALTER TABLE formatodocumentales
+    ADD CONSTRAINT formatov3 FOREIGN KEY ( idformato )
+        REFERENCES formatos ( formato );
+
+ALTER TABLE formatoserie
+    ADD CONSTRAINT formatov4 FOREIGN KEY ( idformato )
+        REFERENCES formatos ( formato );
+
+ALTER TABLE formatovideomusical
+    ADD CONSTRAINT formatov5 FOREIGN KEY ( formato )
+        REFERENCES formatos ( formato );
+
+ALTER TABLE series
+    ADD CONSTRAINT genero FOREIGN KEY ( idgenero )
+        REFERENCES generos ( tipo );
+
+ALTER TABLE documentales
+    ADD CONSTRAINT generos FOREIGN KEY ( idgenero )
+        REFERENCES generos ( tipo );
+
+ALTER TABLE cliente_formadepago
+    ADD CONSTRAINT pago FOREIGN KEY ( tipopago )
+        REFERENCES formasdepago ( tipopago );
+
+ALTER TABLE series
+    ADD CONSTRAINT paises FOREIGN KEY ( idpais )
+        REFERENCES paises ( id );
+
+ALTER TABLE clientes
+    ADD CONSTRAINT paisesv1 FOREIGN KEY ( idpais )
+        REFERENCES paises ( id );
+
+ALTER TABLE artistas
+    ADD CONSTRAINT paisesv2 FOREIGN KEY ( idpais )
+        REFERENCES paises ( id );
+
+ALTER TABLE peliculas
+    ADD CONSTRAINT pasies FOREIGN KEY ( idpais )
+        REFERENCES paises ( id );
+
+ALTER TABLE formatopelicula
+    ADD CONSTRAINT pelcula FOREIGN KEY ( idpelicula )
+        REFERENCES peliculas ( id );
+
+ALTER TABLE peliculagenero
+    ADD CONSTRAINT peli FOREIGN KEY ( idpelicula )
+        REFERENCES peliculas ( id );
+
+ALTER TABLE peliculagenero
+    ADD CONSTRAINT peliv1 FOREIGN KEY ( idgenero )
+        REFERENCES generos ( tipo );
+
+ALTER TABLE repartospelicula
+    ADD CONSTRAINT repapeli FOREIGN KEY ( idpelicula )
+        REFERENCES peliculas ( id );
+
+ALTER TABLE reproducciones
+    ADD CONSTRAINT repro FOREIGN KEY ( idaudiolibro )
+        REFERENCES audiolibro ( id );
+
+ALTER TABLE reproducciones
+    ADD CONSTRAINT reprov1 FOREIGN KEY ( idserie )
+        REFERENCES series ( id );
+
+ALTER TABLE reproducciones
+    ADD CONSTRAINT reprov2 FOREIGN KEY ( idpelicula )
+        REFERENCES peliculas ( id );
+
+ALTER TABLE reproducciones
+    ADD CONSTRAINT reprov3 FOREIGN KEY ( iddocumental )
+        REFERENCES documentales ( id );
+
+ALTER TABLE reproducciones
+    ADD CONSTRAINT reprov4 FOREIGN KEY ( idtansmicionesenvivo )
+        REFERENCES tansmicionesenvivo ( id );
+
+ALTER TABLE reproducciones
+    ADD CONSTRAINT reprov5 FOREIGN KEY ( idvideosmusical )
+        REFERENCES videosmusicales ( id );
+
+ALTER TABLE peliculas
+    ADD CONSTRAINT sagas FOREIGN KEY ( idsaga )
+        REFERENCES sagas ( id );
+
+ALTER TABLE formatoserie
+    ADD CONSTRAINT serie FOREIGN KEY ( idserie )
+        REFERENCES series ( id );
+
+ALTER TABLE repartoserie
+    ADD CONSTRAINT seriev1 FOREIGN KEY ( idserie )
+        REFERENCES series ( id );
+
+ALTER TABLE clientes
+    ADD CONSTRAINT sexo FOREIGN KEY ( idgenero )
+        REFERENCES sexos ( genero );
+
+ALTER TABLE artistas
+    ADD CONSTRAINT sexos FOREIGN KEY ( idgenero )
+        REFERENCES sexos ( genero );
+
+ALTER TABLE temporadas
+    ADD CONSTRAINT temporada FOREIGN KEY ( idserie )
+        REFERENCES series ( id );
+
+ALTER TABLE episodios
+    ADD CONSTRAINT temporadas FOREIGN KEY ( idtemporada )
+        REFERENCES temporadas ( id );
+
+ALTER TABLE videosmusicales
+    ADD CONSTRAINT tipomusical FOREIGN KEY ( idtipomusica )
+        REFERENCES tipomusical ( tipomusica );
+
+ALTER TABLE artistatransmicion
+    ADD CONSTRAINT transmicion FOREIGN KEY ( idartista )
+        REFERENCES artistas ( id );
+
+ALTER TABLE formatotransmicion
+    ADD CONSTRAINT trnasmiciones FOREIGN KEY ( idtansmicionesenvivo )
+        REFERENCES tansmicionesenvivo ( id );
+
+ALTER TABLE formatovideomusical
+    ADD CONSTRAINT videomusical FOREIGN KEY ( idvideosmusical )
+        REFERENCES videosmusicales ( id );
+
+CREATE SEQUENCE formatoaudiolibro_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER formatoaudiolibro_id_trg BEFORE
+    INSERT ON formatoaudiolibro
+    FOR EACH ROW
+    WHEN ( new.id IS NULL )
+BEGIN
+    :new.id := formatoaudiolibro_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE formatodocumentales_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER formatodocumentales_id_trg BEFORE
+    INSERT ON formatodocumentales
+    FOR EACH ROW
+    WHEN ( new.id IS NULL )
+BEGIN
+    :new.id := formatodocumentales_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE formatopelicula_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER formatopelicula_id_trg BEFORE
+    INSERT ON formatopelicula
+    FOR EACH ROW
+    WHEN ( new.id IS NULL )
+BEGIN
+    :new.id := formatopelicula_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE formatoserie_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER formatoserie_id_trg BEFORE
+    INSERT ON formatoserie
+    FOR EACH ROW
+    WHEN ( new.id IS NULL )
+BEGIN
+    :new.id := formatoserie_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE formatotransmicion_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER formatotransmicion_id_trg BEFORE
+    INSERT ON formatotransmicion
+    FOR EACH ROW
+    WHEN ( new.id IS NULL )
+BEGIN
+    :new.id := formatotransmicion_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE formatovideomusical_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER formatovideomusical_id_trg BEFORE
+    INSERT ON formatovideomusical
+    FOR EACH ROW
+    WHEN ( new.id IS NULL )
+BEGIN
+    :new.id := formatovideomusical_id_seq.nextval;
+END;
+/
+

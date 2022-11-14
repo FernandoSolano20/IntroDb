@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Peliculas Sagas FK" directorySegmentName="seg_0" id="28C0AA8D-BCB8-214F-7FCC-8EC12D09D0CC">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:24:44 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>752971FB-E594-552D-B11B-FE42C8CB05C8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5C7B7C5D-57C2-53A4-3267-BEE753AD2CD9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>371B5092-EB28-798A-56DF-F885D62FCC77</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

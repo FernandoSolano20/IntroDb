@@ -1,0 +1,5 @@
+select e.idemp, idjefe
+                    from empleados e
+                    join puestos p on (e.idpuesto = p.idpuesto)
+                    where p.titulo = 'Programador'
+/

@@ -1,0 +1,319 @@
+SQL> start 9
+SQL> select a.titulo "titulo", 'Audio libro' "tipo", (select count(1)
+  2  					     from audiolibro aa
+  3  					     join Reproducciones r on (aa.id = r.idaudiolibro)
+  4  					     where aa.id = a.id) "reproducciones",
+  5  					     (select count(1)
+  6  					     from audiolibro aa
+  7  					     join formatoaudiolibro fa on (aa.id = fa.idAudioLibro)
+  8  					     join descargas d on (fa.id = d.idFormatoAudioLibro)
+  9  					     where aa.id = a.id) "descargas",
+ 10  					     max(rr.fechainicio) "ultima reproduccion",
+ 11  					     max(dd.fechainicio) "ultima descarga"
+ 12  from audiolibro a
+ 13  full outer join Reproducciones rr on (a.id = rr.idaudiolibro)
+ 14  full outer join formatoaudiolibro faa on (a.id = faa.idAudioLibro)
+ 15  full outer join descargas dd on (faa.id = dd.idFormatoAudioLibro)
+ 16  where a.id is not null
+ 17  group by a.titulo, a.id, 'Audio libro'
+ 18  UNION
+ 19  select p.titulo "titulo", 'Peliculas' "tipo", (select count(1)
+ 20  					     from peliculas pp
+ 21  					     join Reproducciones rr on (pp.id = rr.idpelicula)
+ 22  					     where pp.id = p.id) "reproducciones",
+ 23  					     (select count(1)
+ 24  					     from audiolibro pp
+ 25  					     join formatopelicula ppf on (pp.id = ppf.idpelicula)
+ 26  					     join descargas dd on (ppf.id = dd.idFormatoPelicula)
+ 27  					     where pp.id = p.id) "descargas",
+ 28  					     max(r.fechainicio) "ultima reproduccion",
+ 29  					     max(d.fechainicio) "ultima descarga"
+ 30  from peliculas p
+ 31  full outer join Reproducciones r on (p.id = r.idpelicula)
+ 32  full outer join formatopelicula pf on (p.id = pf.idPelicula)
+ 33  full outer join descargas d on (pf.id = d.idFormatoPelicula)
+ 34  where p.id is not null
+ 35  group by p.titulo, p.id, 'Peliculas'
+ 36  UNION
+ 37  select v.nombre "titulo", 'Videos Musicales' "tipo", (select count(1)
+ 38  					     from videosmusicales vv
+ 39  					     join Reproducciones rr on (vv.id = rr.idVideosMusical)
+ 40  					     where vv.id = v.id) "reproducciones",
+ 41  					     (select count(1)
+ 42  					     from videosmusicales vv
+ 43  					     join FormatoVideoMusical vvf on (vv.id = vvf.idVideosMusical)
+ 44  					     join descargas dd on (vvf.id = dd.idFormatoMusical)
+ 45  					     where vv.id = v.id) "descargas",
+ 46  					     max(r.fechainicio) "ultima reproduccion",
+ 47  					     max(d.fechainicio) "ultima descarga"
+ 48  from videosmusicales v
+ 49  full outer join Reproducciones r on (v.id = r.idVideosMusical)
+ 50  full outer join FormatoVideoMusical vf on (v.id = vf.idVideosMusical)
+ 51  full outer join descargas d on (vf.id = d.idFormatoMusical)
+ 52  where v.id is not null
+ 53  group by v.nombre, v.id, 'Videos Musicales'
+ 54  UNION
+ 55  select t.titulo "titulo", 'Transmiciones vivo' "tipo", (select count(1)
+ 56  					     from TansmicionesEnVivo tt
+ 57  					     join Reproducciones rr on (tt.id = rr.idTansmicionesEnVivo)
+ 58  					     where tt.id = t.id) "reproducciones",
+ 59  					     0 "descargas",
+ 60  					     max(r.fechainicio) "ultima reproduccion",
+ 61  					     null "ultima descarga"
+ 62  from TansmicionesEnVivo t
+ 63  full outer join Reproducciones r on (t.id = r.idTansmicionesEnVivo)
+ 64  where t.id is not null
+ 65  group by t.titulo, t.id, 'Transmiciones vivo'
+ 66  UNION
+ 67  select d.titulo "titulo", 'Documentales' "tipo", (select count(1)
+ 68  					     from documentales dd
+ 69  					     join Reproducciones rr on (dd.id = rr.idDocumental)
+ 70  					     where dd.id = d.id) "reproducciones",
+ 71  					     (select count(1)
+ 72  					     from documentales dd
+ 73  					     join FormatoDocumentales ddf on (dd.id = ddf.idDocumental)
+ 74  					     join descargas dd on (ddf.id = dd.idFormatoDocumental)
+ 75  					     where dd.id = d.id) "descargas",
+ 76  					     max(r.fechainicio) "ultima reproduccion",
+ 77  					     max(d.fechainicio) "ultima descarga"
+ 78  from documentales d
+ 79  full outer join Reproducciones r on (d.id = r.idDocumental)
+ 80  full outer join FormatoDocumentales df on (d.id = df.idDocumental)
+ 81  full outer join descargas d on (df.id = d.idFormatoDocumental)
+ 82  where d.id is not null
+ 83  group by d.titulo, d.id, 'Documentales'
+ 84  UNION
+ 85  select e.titulo "titulo", 'Episodios' "tipo", (select count(1)
+ 86  					     from episodios ee
+ 87  					     join Reproducciones rr on (ee.id = rr.idEpisodio)
+ 88  					     where ee.id = e.id) "reproducciones",
+ 89  					     (select count(1)
+ 90  					     from episodios ee
+ 91  					     join FormatoEpisodio eef on (ee.id = eef.idEpisodio)
+ 92  					     join descargas dd on (eef.id = dd.idFormatoEpisodio)
+ 93  					     where ee.id = e.id) "descargas",
+ 94  					     max(r.fechainicio) "ultima reproduccion",
+ 95  					     max(d.fechainicio) "ultima descarga"
+ 96  from episodios e
+ 97  full outer join Reproducciones r on (e.id = r.idEpisodio)
+ 98  full outer join FormatoEpisodio ef on (e.id = ef.idEpisodio)
+ 99  full outer join descargas d on (ef.id = d.idFormatoEpisodio)
+100  where e.id is not null
+101  group by e.titulo, e.id, 'Episodios'
+102  order by "titulo"
+103  /
+
+titulo                         tipo                           reproducciones  descargas ultima re ultima de                                                                                             
+------------------------------ ------------------------------ -------------- ---------- --------- ---------                                                                                             
+Alas negras, palabras negras   Episodios                                   0          0                                                                                                                 
+American Tune                  Videos Musicales                            0          0                                                                                                                 
+Anastasia y yo; la historia de Audio libro                                 2          0 16-AUG-20                                                                                                       
+ Kullervo                                                                                                                                                                                               
+                                                                                                                                                                                                        
+Apuntes para una película de  Documentales                                3          2 16-AUG-20 16-AUG-20                                                                                             
+atracos                                                                                                                                                                                                 
+                                                                                                                                                                                                        
+Así se hacen las películas   Audio libro                                 0          0                                                                                                                 
+Baelor                         Episodios                                   1          0 16-AUG-20                                                                                                       
+Bailando en los jardines de pa Transmiciones vivo                          3          0 16-AUG-20                                                                                                       
+lacio                                                                                                                                                                                                   
+                                                                                                                                                                                                        
+Baile de huesos                Audio libro                                 1          0 16-AUG-20                                                                                                       
+Caras y lugares                Peliculas                                   0          2           16-AUG-20                                                                                             
+Cinematografía: teoría y pr� Audio libro                                 3          6 16-AUG-20 16-AUG-20                                                                                             
+�ctica                                                                                                                                                                                                  
+                                                                                                                                                                                                        
+Columbus                       Peliculas                                   3          0 16-AUG-20                                                                                                       
+Conquista de lo inútil        Audio libro                                 0          5           16-AUG-20                                                                                             
+Country a casi 7.000km de Nash Transmiciones vivo                          5          0 16-AUG-20                                                                                                       
+ville                                                                                                                                                                                                   
+                                                                                                                                                                                                        
+Crudo                          Peliculas                                   1          0 16-AUG-20                                                                                                       
+DC Jazz Festival               Transmiciones vivo                          0          0                                                                                                                 
+De fiesta en una antigua granj Transmiciones vivo                          2          0 16-AUG-20                                                                                                       
+a                                                                                                                                                                                                       
+                                                                                                                                                                                                        
+Deadpool                       Peliculas                                   1          0 16-AUG-20                                                                                                       
+Deadpool II                    Peliculas                                   0          0                                                                                                                 
+Del arte del teatro            Audio libro                                 1          0 16-AUG-20                                                                                                       
+Democracia                     Audio libro                                 0          0                                                                                                                 
+Dramaturgia de Hamburgo        Audio libro                                 0          1           16-AUG-20                                                                                             
+El Camino Real                 Episodios                                   2          1 16-AUG-20 16-AUG-20                                                                                             
+El Camino del Castigo          Episodios                                   0          1           16-AUG-20                                                                                             
+El Cine según Hitchcock       Audio libro                                 1          4 16-AUG-20 16-AUG-20                                                                                             
+El Norte no olvida             Episodios                                   0          2           16-AUG-20                                                                                             
+
+titulo                         tipo                           reproducciones  descargas ultima re ultima de                                                                                             
+------------------------------ ------------------------------ -------------- ---------- --------- ---------                                                                                             
+El castillo de cristal         Peliculas                                   0          0                                                                                                                 
+El lobo y el león             Episodios                                   0          0                                                                                                                 
+El pan de la guerra (The Bread Peliculas                                   1          0 16-AUG-20                                                                                                       
+winner)                                                                                                                                                                                                 
+                                                                                                                                                                                                        
+El secreto mejor guardado      Transmiciones vivo                          0          0                                                                                                                 
+En el momento del parpadeo: Un Audio libro                                 2          1 16-AUG-20 16-AUG-20                                                                                             
+ punto de vista sobre el monta                                                                                                                                                                          
+je cinematográfico                                                                                                                                                                                     
+                                                                                                                                                                                                        
+En la playa sola de noche      Peliculas                                   0          0                                                                                                                 
+En la sombra                   Peliculas                                   1          0 16-AUG-20                                                                                                       
+Fast and Furious 7             Peliculas                                   1          0 16-AUG-20                                                                                                       
+Fast and Furious 8             Peliculas                                   1          0 16-AUG-20                                                                                                       
+Feliz día de tu muerte        Peliculas                                   0          0                                                                                                                 
+Festival de Blues de la Bahía Transmiciones vivo                          4          0 16-AUG-20                                                                                                       
+ de Chesapeake                                                                                                                                                                                          
+                                                                                                                                                                                                        
+Firefly                        Videos Musicales                            1          0 16-AUG-20                                                                                                       
+Food, Inc.                     Documentales                                4          1 16-AUG-20 16-AUG-20                                                                                             
+Fuego y sangre                 Episodios                                   0          0                                                                                                                 
+Fyre: The Greatest Party That  Documentales                                2          3 16-AUG-20 16-AUG-20                                                                                             
+Never Happened                                                                                                                                                                                          
+                                                                                                                                                                                                        
+Ganas o mueres                 Episodios                                   3          1 16-AUG-20 16-AUG-20                                                                                             
+Grizzly Man                    Documentales                                2          2 16-AUG-20 16-AUG-20                                                                                             
+Hearts do not break around her Videos Musicales                            2          1 16-AUG-20 16-AUG-20                                                                                             
+e                                                                                                                                                                                                       
+                                                                                                                                                                                                        
+Hostiles                       Peliculas                                   0          0                                                                                                                 
+How Would You Feel             Videos Musicales                            2          4 16-AUG-20 16-AUG-20                                                                                             
+Jumanji: Bienvenidos a la jung Peliculas                                   0          0                                                                                                                 
+la                                                                                                                                                                                                      
+                                                                                                                                                                                                        
+Kiss Me                        Videos Musicales                            1          0 16-AUG-20                                                                                                       
+La cadena rota                 Audio libro                                 0          1           16-AUG-20                                                                                             
+La muerte de Stalin            Peliculas                                   0          1           16-AUG-20                                                                                             
+
+titulo                         tipo                           reproducciones  descargas ultima re ultima de                                                                                             
+------------------------------ ------------------------------ -------------- ---------- --------- ---------                                                                                             
+La suerte de los Logan         Peliculas                                   2          1 16-AUG-20 16-AUG-20                                                                                             
+Lego House                     Videos Musicales                            2          8 16-AUG-20 16-AUG-20                                                                                             
+Lord Nieve                     Episodios                                   1          2 16-AUG-20 16-AUG-20                                                                                             
+Los vengadores I               Peliculas                                   2          0 16-AUG-20                                                                                                       
+Los vengadores II              Peliculas                                   1          0 16-AUG-20                                                                                                       
+Mad Cool: El rey de los festiv Transmiciones vivo                          4          0 16-AUG-20                                                                                                       
+ales                                                                                                                                                                                                    
+                                                                                                                                                                                                        
+Matarile                       Audio libro                                 3          0 16-AUG-20                                                                                                       
+Memorias                       Audio libro                                 0          0                                                                                                                 
+Misterio y festival            Audio libro                                 1          0 16-AUG-20                                                                                                       
+Moby Dick, un ensayo           Audio libro                                 0          0                                                                                                                 
+Mudbound                       Peliculas                                   0          3           16-AUG-20                                                                                             
+On Directing Film              Audio libro                                 2          2 16-AUG-20 16-AUG-20                                                                                             
+One Cut of The Dead            Peliculas                                   0          6           16-AUG-20                                                                                             
+Perfect                        Videos Musicales                            2          3 16-AUG-20 16-AUG-20                                                                                             
+Photograph                     Videos Musicales                            3          0 16-AUG-20                                                                                                       
+Piloto                         Episodios                                   1          0 16-AUG-20                                                                                                       
+Piloto                         Episodios                                   1          2 16-AUG-20 16-AUG-20                                                                                             
+Piloto                         Episodios                                   1          4 16-AUG-20 16-AUG-20                                                                                             
+Piloto                         Episodios                                   2          1 16-AUG-20 16-AUG-20                                                                                             
+Por el lado de la punta        Episodios                                   3          0 16-AUG-20                                                                                                       
+Por un teatro cívico          Audio libro                                 1          0 16-AUG-20                                                                                                       
+Powderfinger                   Videos Musicales                            0          0                                                                                                                 
+Rebelde sin pasta              Audio libro                                 1          1 16-AUG-20 16-AUG-20                                                                                             
+Se acerca el invierno          Episodios                                   1          6 16-AUG-20 16-AUG-20                                                                                             
+Sing                           Videos Musicales                            1          0 16-AUG-20                                                                                                       
+Space Oddity                   Videos Musicales                            3          0 16-AUG-20                                                                                                       
+Sweet Jane                     Videos Musicales                            1          0 16-AUG-20                                                                                                       
+Teatro de cabaret              Audio libro                                 1          0 16-AUG-20                                                                                                       
+Teatro, política, sociedad    Audio libro                                 0          0                                                                                                                 
+Tenerife Sea                   Videos Musicales                            1          1 16-AUG-20 16-AUG-20                                                                                             
+The Act of Killing             Documentales                                5          4 16-AUG-20 16-AUG-20                                                                                             
+The Last Dance                 Documentales                                5          8 16-AUG-20 16-AUG-20                                                                                             
+The Meyerowitz Stories         Peliculas                                   2          0 16-AUG-20                                                                                                       
+Thinking Out Loud              Videos Musicales                            0          2           16-AUG-20                                                                                             
+Tierra de Dios                 Peliculas                                   1          3 16-AUG-20 16-AUG-20                                                                                             
+
+titulo                         tipo                           reproducciones  descargas ultima re ultima de                                                                                             
+------------------------------ ------------------------------ -------------- ---------- --------- ---------                                                                                             
+Todo el dinero del mundo       Peliculas                                   0          2           16-AUG-20                                                                                             
+Un don excepcional             Peliculas                                   2          0 16-AUG-20                                                                                                       
+Un gran festival con los pies  Transmiciones vivo                          2          0 16-AUG-20                                                                                                       
+en la arena                                                                                                                                                                                             
+                                                                                                                                                                                                        
+Una corona de oro              Episodios                                   4          0 16-AUG-20                                                                                                       
+What is Going On              Videos Musicales                            1          0 16-AUG-20                                                                                                       
+Your Name                      Peliculas                                   1          2 16-AUG-20 16-AUG-20                                                                                             
+
+90 rows selected.
+
+SQL> start 10
+SQL> select a.nombre, 'Actor' "Rol",
+  2  			     (select count(1)
+  3  			     from artistas aa
+  4  			     join repartospelicula rp on (aa.id = rp.idArtista)
+  5  			     where aa.id = a.id) Peliculas,
+  6  			     (select count(1)
+  7  			     from artistas aa
+  8  			     join repartoserie rs on (aa.id = rs.idArtista)
+  9  			     where aa.id = a.id) Series,
+ 10  			     min(to_char(p.anno)) "Primera pelicula",
+ 11  			     min(to_char(s.anno)) "Primera serie"
+ 12  from artistas a
+ 13  full outer join repartospelicula rrp on (a.id = rrp.idArtista)
+ 14  full outer join repartoserie rrs on (a.id = rrs.idArtista)
+ 15  full outer join peliculas p on (rrp.idPelicula = p.id)
+ 16  full outer join series s on (rrs.idSerie = s.id)
+ 17  where (select count(1)
+ 18  	     from artistas aa
+ 19  	     join repartospelicula rp on (aa.id = rp.idArtista)
+ 20  	     where aa.id = a.id) <> 0
+ 21  	     or
+ 22  	     (select count(1)
+ 23  	     from artistas aa
+ 24  	     join repartoserie rs on (aa.id = rs.idArtista)
+ 25  	     where aa.id = a.id) <> 0
+ 26  group by a.nombre, a.id
+ 27  UNION
+ 28  select a.nombre, 'Director' "Rol",
+ 29  			     (select count(1)
+ 30  			     from artistas aa
+ 31  			     join peliculas pp on (aa.id = pp.idArtista)
+ 32  			     where aa.id = a.id) "Peliculas",
+ 33  			     (select count(1)
+ 34  			     from artistas aa
+ 35  			     join series ss on (aa.id = ss.idArtista)
+ 36  			     where aa.id = a.id) "Series",
+ 37  			     min(to_char(p.anno)) "Primera pelicula",
+ 38  			     min(to_char(s.anno)) "Primera serie"
+ 39  from artistas a
+ 40  full outer join peliculas p on (a.id = p.idArtista)
+ 41  full outer join series s on (a.id = s.idArtista)
+ 42  where (select count(1)
+ 43  	     from artistas aa
+ 44  	     join peliculas pp on (aa.id = pp.idArtista)
+ 45  	     where aa.id = a.id) <> 0
+ 46  	     or
+ 47  	     (select count(1)
+ 48  		 from artistas aa
+ 49  		 join series ss on (aa.id = ss.idArtista)
+ 50  		 where aa.id = a.id) <> 0
+ 51  group by a.nombre, a.id
+ 52  order by nombre
+ 53  /
+
+NOMBRE                         Rol       PELICULAS     SERIES Primera pelicula   Primera serie                                                                                                          
+------------------------------ -------- ---------- ---------- ------------------ ------------------                                                                                                     
+Alfred                         Director          4          1 07-JAN-17          07-SEP-16                                                                                                              
+Christopher                    Actor             4          4 03-AUG-17          07-AUG-17                                                                                                              
+Christopher Robert             Actor             4          2 03-AUG-17          07-DEC-17                                                                                                              
+David                          Director          2          1 03-FEB-17          07-AUG-17                                                                                                              
+Dwayne Douglas                 Actor             4          4 03-AUG-17          07-JAN-17                                                                                                              
+Federico                       Director          0          1                    07-DEC-17                                                                                                              
+Francis Ford                   Director          1          0 03-AUG-17                                                                                                                                 
+Hugh Michael                   Actor             3          4 03-JAN-17          07-AUG-17                                                                                                              
+Ingmar                         Director          3          1 03-JAN-17          07-MAR-17                                                                                                              
+Keanu Charles                  Actor             4          2 03-AUG-17          07-JAN-17                                                                                                              
+Leonardo Wilhelm               Actor             4          2 03-AUG-17          03-AUG-17                                                                                                              
+Martin                         Director          2          1 07-AUG-17          03-AUG-17                                                                                                              
+Morgan                         Actor             4          2 03-AUG-17          07-SEP-16                                                                                                              
+Quentin Jerome                 Director          6          0 03-JAN-14                                                                                                                                 
+Robert John                    Actor             4          1 03-AUG-17          07-DEC-17                                                                                                              
+Roman                          Director          3          2 03-AUG-17          07-JAN-17                                                                                                              
+Ryan Rodney                    Actor             4          5 07-AUG-17          03-AUG-17                                                                                                              
+Stanley                        Director          3          1 07-JUN-17          07-OCT-17                                                                                                              
+Steven Allan                   Director          1          2 07-SEP-17          07-MAR-17                                                                                                              
+Thomas Jeffrey                Actor             4          3 03-AUG-17          03-AUG-17                                                                                                              
+
+20 rows selected.
+
+SQL> spool off

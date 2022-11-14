@@ -1,0 +1,50 @@
+SQL> start tarea3
+SQL> select
+  2  	     case WHEN sexo = 'M' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) <= 30
+  3  	     THEN 'Hombres Jovenes'
+  4  	 WHEN sexo = 'M' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) >= 31
+  5  	     THEN 'Hombres Mayores'
+  6  	     WHEN sexo = 'F' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) <= 30
+  7  	     THEN 'Mujeres Jovenes'
+  8  	 WHEN sexo = 'F' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) >= 31
+  9  	     THEN 'Mujeres Mayores'
+ 10  	     END "GRUPO",
+ 11  	     count(case WHEN to_char(dianacimiento,'mm') >= 01 and
+ 12  			     to_char(dianacimiento,'mm') <= 03
+ 13  		     THEN 'Trimestres I'
+ 14  		     END) "Trimestres I",
+ 15  	     count(case WHEN to_char(dianacimiento,'mm') >= 04 and
+ 16  			     to_char(dianacimiento,'mm') <= 06
+ 17  		     THEN 'Trimestres II'
+ 18  		     END) "Trimestres II",
+ 19  	     count(case WHEN to_char(dianacimiento,'mm') >= 07 and
+ 20  			     to_char(dianacimiento,'mm') <= 09
+ 21  		     THEN 'Trimestres III'
+ 22  		     END) "Trimestres III",
+ 23  	     count(case WHEN to_char(dianacimiento,'mm') >= 10 and
+ 24  			     to_char(dianacimiento,'mm') <= 12
+ 25  		     THEN 'Trimestres IV'
+ 26  		     END) "Trimestres IV"
+ 27  FROM empleados
+ 28  group by (case WHEN sexo = 'M' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) <= 30
+ 29  	     THEN 'Hombres Jovenes'
+ 30  	 WHEN sexo = 'M' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) >= 31
+ 31  	     THEN 'Hombres Mayores'
+ 32  	     WHEN sexo = 'F' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) <= 30
+ 33  	     THEN 'Mujeres Jovenes'
+ 34  	 WHEN sexo = 'F' and trunc(months_between(SYSDATE, dianacimiento) /12, 0) >= 31
+ 35  	     THEN 'Mujeres Mayores'
+ 36  	     END)
+ 37  order by GRUPO
+ 38  /
+
+GRUPO           Trimestres I Trimestres II Trimestres III Trimestres IV         
+--------------- ------------ ------------- -------------- -------------         
+Hombres Jovenes            3             3              4             2         
+Hombres Mayores           30            40             30            31         
+Mujeres Jovenes            3             3              3             2         
+Mujeres Mayores           23            16             14            18         
+
+4 rows selected.
+
+SQL> spool off

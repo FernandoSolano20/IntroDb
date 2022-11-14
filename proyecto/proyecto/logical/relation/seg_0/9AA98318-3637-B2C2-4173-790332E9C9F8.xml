@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Clientes Sexos FK" directorySegmentName="seg_0" id="9AA98318-3637-B2C2-4173-790332E9C9F8">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:39:10 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>29DF66AE-C171-294F-FD9B-CC4350A0F082</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>09EBFB94-699C-33C7-D91E-C7F8724B8DFF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>947F90DD-1477-F27F-E178-1798EC3632F6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

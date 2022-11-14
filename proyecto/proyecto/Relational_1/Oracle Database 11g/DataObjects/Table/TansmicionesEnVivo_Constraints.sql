@@ -1,0 +1,1 @@
+ALTER TABLE tansmicionesenvivo ADD CONSTRAINT tansmicionesenvivo_pk PRIMARY KEY ( id );

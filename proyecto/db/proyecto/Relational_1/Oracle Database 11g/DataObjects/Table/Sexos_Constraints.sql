@@ -1,0 +1,1 @@
+ALTER TABLE sexos ADD CONSTRAINT sexos_pk PRIMARY KEY ( genero );

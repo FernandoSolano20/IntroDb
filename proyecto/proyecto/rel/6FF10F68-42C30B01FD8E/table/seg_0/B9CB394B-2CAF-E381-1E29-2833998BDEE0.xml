@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B9CB394B-2CAF-E381-1E29-2833998BDEE0" name="FormatoEpisodio">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:18:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contiene el formato de los episodios]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<ordsAlias>table_100</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="D4636C6B-64A0-7815-FADB-6FD5519AD694">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:20:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[Llave primaria formato de los episodios]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idEpisodio" id="CE69B06A-A1D6-824C-8D87-17A47D14E20F">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:20:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del episodio]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0CD89E6E-4832-105D-8301-C4087CC2E89E" referredColumn="973A7428-0CB2-73F4-747A-48FFA7D3A992"/>
+</associations>
+</Column>
+<Column name="idFormato" id="5E71206D-18F8-FD00-9060-78A139ECCF18">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:20:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<domain>9E65350E-0380-5240-DB2E-E05322D46046</domain>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B42D309-28F5-B74F-C9EB-02B5F861BCE7" referredColumn="EF0EF921-5A52-42DE-0C7B-36C531E21C0C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F883A5E2-E778-9F92-CEE8-AC0121908CA0" name="FormatoEpisodio_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:20:06 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4636C6B-64A0-7815-FADB-6FD5519AD694"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="322918CE-F967-06EB-184E-621A41F58108" name="FormatoEpisodio_Episodios_FK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:20:15 UTC</createdTime>
+<generatorID>0AB31ACE-BB7E-72EC-9C87-0B2FEE72F914</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE69B06A-A1D6-824C-8D87-17A47D14E20F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7BD3642-154C-E6C9-1F73-3DE9A2B39066" name="FormatoEpisodio_Formatos_FK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:20:36 UTC</createdTime>
+<generatorID>D2C114FC-F0A7-C7E8-A810-9380349ACF52</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E71206D-18F8-FD00-9060-78A139ECCF18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

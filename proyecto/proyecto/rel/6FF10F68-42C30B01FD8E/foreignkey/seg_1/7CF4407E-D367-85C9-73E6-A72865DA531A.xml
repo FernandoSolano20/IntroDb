@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="7CF4407E-D367-85C9-73E6-A72865DA531A" containerWithKeyObject="34F4D609-10EE-5DEC-691B-71835003713A" localFKIndex="F397A23A-D37D-AD1C-344D-83C981D08B93" name="seire_temporadas">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>39FA6BA7-3181-FFED-4ACF-01C629FF54A5</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>Series</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>44919CE6-300A-8E61-9E00-02FA0F830ED1</referredTableID>
+<keyObject>EA4232B7-54ED-BE29-8F2D-2122644795A4</keyObject>
+<referredKeyID>EA4232B7-54ED-BE29-8F2D-2122644795A4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

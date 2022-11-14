@@ -1,0 +1,1 @@
+ALTER TABLE paises ADD CONSTRAINT paises_pk PRIMARY KEY ( id );

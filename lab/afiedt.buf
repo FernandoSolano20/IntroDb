@@ -1,0 +1,4 @@
+select idjefe
+from empleados
+where idjefe = 205
+/

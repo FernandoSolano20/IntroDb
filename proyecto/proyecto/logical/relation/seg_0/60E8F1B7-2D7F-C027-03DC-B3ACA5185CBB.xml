@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FormatoSerie Formatos FK" directorySegmentName="seg_0" id="60E8F1B7-2D7F-C027-03DC-B3ACA5185CBB">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:12:42 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>D2C114FC-F0A7-C7E8-A810-9380349ACF52</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E88B618E-3DC4-ECAC-C3C0-5C3A7A0D7BD3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2A745CA4-EC6F-2925-032F-14B9ACF30D56</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

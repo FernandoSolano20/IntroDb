@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Reproducciones Series FK" directorySegmentName="seg_0" id="E98F351A-470F-611A-C5B7-FBF8542D4E42">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:10:54 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>69742A04-7A2E-B518-3FDA-108E862AE3C0</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2025F213-6511-3058-ADAA-D389E16E5FBF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FA58D895-FC45-9FFF-6D53-F172BA2FA136</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Artistas Paises FK" directorySegmentName="seg_0" id="B81425A8-0EDF-A795-6069-04811E61DA51">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:50:45 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>D4B26F25-1598-0C7E-4523-DEB661FC86AE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F79AE59E-C89B-5217-0144-F78A44C482D4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>948C5FAA-A5B6-055A-0391-24986F1B0BD5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

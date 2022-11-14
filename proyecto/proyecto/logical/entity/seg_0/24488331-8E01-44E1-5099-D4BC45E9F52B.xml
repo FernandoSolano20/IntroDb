@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="24488331-8E01-44E1-5099-D4BC45E9F52B" name="Cliente FormaDePago">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:43:35 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Clientes id" id="0C6CB738-E641-0700-3140-05CEB5769AB8">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:44:24 UTC</createdTime>
+<generatorID>7F6E3535-54E1-B7BB-2484-9D92D2BFEE29</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>9D2F0C07-C2C3-2CA4-FB19-39B7A245EE7A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FormasDePago tipoPago" id="D61F58BB-2CE7-C080-97F6-9DBA9D9F8AEF">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:44:45 UTC</createdTime>
+<generatorID>2829F87B-EB7B-0499-2174-A3C8F10E7ED8</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>BC3EFA65-CB33-4129-88F6-84FC50ACE742</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C52A3677-7385-DB18-D3DC-03E4B3899B11" name="Cliente FormaDePago PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-11 08:41:58 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0C6CB738-E641-0700-3140-05CEB5769AB8</attributeRef>
+<attributeRef>D61F58BB-2CE7-C080-97F6-9DBA9D9F8AEF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

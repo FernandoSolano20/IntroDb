@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Episodios Temporadas FK" directorySegmentName="seg_0" id="D96EA06F-FCF2-D39D-EA74-A48CB79EBD1A">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:19:42 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>33740F0C-35BA-66AB-22D5-3E363FB28277</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EED93956-B04C-6F89-71D6-459121C41EA1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>308CF390-690B-812B-09B1-0C99A1737C02</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

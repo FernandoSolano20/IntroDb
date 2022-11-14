@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Artistas Sexos FK" directorySegmentName="seg_0" id="1025865D-8207-C03D-05CF-73354C9558B9">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:51:04 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>29DF66AE-C171-294F-FD9B-CC4350A0F082</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>09EBFB94-699C-33C7-D91E-C7F8724B8DFF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>948C5FAA-A5B6-055A-0391-24986F1B0BD5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

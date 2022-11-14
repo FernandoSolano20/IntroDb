@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FormatoAudioLibro Formatos FK" directorySegmentName="seg_0" id="D8F7DE3E-4692-8693-C657-FEC62B57D259">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:01:44 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>D2C114FC-F0A7-C7E8-A810-9380349ACF52</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E88B618E-3DC4-ECAC-C3C0-5C3A7A0D7BD3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>80FF8147-FBC4-CAA2-0F52-28185231DED8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

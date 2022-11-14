@@ -1,0 +1,1 @@
+ALTER TABLE formatos ADD CONSTRAINT formatos_pk PRIMARY KEY ( formato );

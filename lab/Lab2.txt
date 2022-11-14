@@ -1,0 +1,263 @@
+SQL> start 1
+SQL> select main.nombre, main.apellido, to_char(main.dianacimiento, 'yyyy') nacimiento, (case
+  2  									     main.idemp when (select idemp from empleados
+  3  											 where idemp in (select distinct idjefe
+  4  													 from empleados
+  5  													 where idjefe is not null and main.idemp = idjefe)
+  6  											 INTERSECT
+  7  											 select idemp from empleados
+  8  											 where idemp in (select distinct iddirector
+  9  													 from departamentos
+ 10  													 where iddirector is not null and main.idemp = iddirector))
+ 11  													 THEN  'DJ'
+ 12  										     when (select idemp from empleados
+ 13  											 where idemp in (select distinct idjefe
+ 14  													 from empleados
+ 15  													 where idjefe is not null and main.idemp = idjefe))
+ 16  											 THEN 'J'
+ 17  										     ELSE 'D' end) TipoGerencia
+ 18  from (select idemp, nombre, apellido, dianacimiento
+ 19  	     from empleados
+ 20  	     where idemp in (select idemp from empleados
+ 21  			     where idemp in (select distinct idjefe
+ 22  					     from empleados
+ 23  					     where idjefe is not null)
+ 24  			     UNION ALL
+ 25  			     select idemp from empleados
+ 26  			     where idemp in (select distinct iddirector
+ 27  					     from departamentos
+ 28  					     where iddirector is not null) )) main
+ 29  where SUBSTR(to_char(main.dianacimiento,'yyyy'),3,1) = (select decada
+ 30  							 from (select SUBSTR(to_char(dianacimiento,'yyyy'),3,1) decada, count(1) contador
+ 31  								 from empleados
+ 32  								 where idemp not in (select idemp from empleados
+ 33  											 where idemp in (select distinct idjefe
+ 34  													 from empleados
+ 35  													 where idjefe is not null))
+ 36  								 group by SUBSTR(to_char(dianacimiento,'yyyy'),3,1)
+ 37  								 order by contador desc)
+ 38  							 where rownum <= 1)
+ 39  order by main.apellido, main.nombre
+ 40  /
+
+NOMBRE               APELLIDO        NACIMIENTO      TIPOGERENCIA                                   
+-------------------- --------------- --------------- ---------------                                
+DUCEM                BARR            1971            J                                              
+ONUM                 BARR            1970            J                                              
+ISABEL               BORJUES         1970            J                                              
+ERNESTO              DAQUESA         1976            J                                              
+FRANCISCO            FONTINE         1979            J                                              
+SURA                 NOVI            1973            J                                              
+DANEEL               OLIVAW          1971            J                                              
+GISKARD              REVENTLOV       1970            J                                              
+ISABELLA             ROSETTI         1971            J                                              
+POLA                 SHEKT           1976            DJ                                             
+
+10 rows selected.
+
+SQL> start 2
+SQL> select nombre, apellido, to_char(dianacimiento, 'mm') mes, trunc(months_between(SYSDATE, dianacimiento) /12, 0) annos,
+  2  	 trunc((select AVG(trunc(months_between(SYSDATE, dianacimiento) /12, 0))
+  3  	     from empleados
+  4  	     where to_char(dianacimiento, 'mm') = to_char(e.dianacimiento, 'mm'))) prom
+  5  from empleados e
+  6  where trunc(months_between(SYSDATE, dianacimiento) /12, 0) > trunc((select AVG(trunc(months_between(SYSDATE, dianacimiento) /12, 0))
+  7  	     from empleados
+  8  	     where to_char(dianacimiento, 'mm') = to_char(e.dianacimiento, 'mm')))
+  9  /
+
+NOMBRE               APELLIDO        MES      ANNOS       PROM                                      
+-------------------- --------------- --- ---------- ----------                                      
+HARI                 SELDON          06          56         48                                      
+DANEEL               OLIVAW          12          48         46                                      
+GISKARD              REVENTLOV       03          50         45                                      
+ARKADY               DARELL          03          59         45                                      
+JOSEPH               SCHWARTZ        01          68         48                                      
+ELIJAH               BALEY           11          44         43                                      
+HOBER                MALLOW          09          52         44                                      
+BAYTA                DARELL          11          52         43                                      
+GAAL                 DORNICK         08          52         45                                      
+RAICH                SELDON          03          49         45                                      
+SUSAN                CALVIN          12          48         46                                      
+DORS                 VENABILI        09          51         44                                      
+JANOV                PELORAT         02          46         43                                      
+YUGO                 AMARIL          07          48         41                                      
+LORS                 AVAKIM          08          51         45                                      
+DUCEM                BARR            10          48         47                                      
+ONUM                 BARR            12          49         46                                      
+HARLA                BRANNO          01          62         48                                      
+LINGE                CHEN            07          45         41                                      
+LUNDIN               CRAST           04          39         38                                      
+TORAN SI             BAYTA           03          57         45                                      
+TORAN                DARELL          04          44         38                                      
+TAMWIL               ELAR            04          42         38                                      
+JORD                 FARA            12          47         46                                      
+YATE                 FULHAM          06          61         48                                      
+STOR                 GENDIVAL        02          48         43                                      
+MANDELL              GRUBER          07          59         41                                      
+PRIMARUL             INDBUR          11          56         43                                      
+LASKIN               JORANUM         05          59         46                                      
+YOHAN                LEE             10          63         47                                      
+JENARR               LEGGEN          01          67         48                                      
+REGELE               LEPOLD          10          51         47                                      
+PUBLIS               MANLIO          06          57         48                                      
+HOMIR                MUNN            12          67         46                                      
+SURA                 NOVI            02          47         43                                      
+STETTIN              PALVER          09          63         44                                      
+JORD                 PARMA           10          49         47                                      
+
+NOMBRE               APELLIDO        MES      ANNOS       PROM                                      
+-------------------- --------------- --- ---------- ----------                                      
+LEWIS                PIRENNE         04          40         38                                      
+ELVETT               SEMIC           08          61         45                                      
+SEF                  SERMAK          09          61         44                                      
+QUINDOR              SHANDESS        05          68         46                                      
+JORAME               SUTT            09          68         44                                      
+JOLE                 TURBOR          12          62         46                                      
+POLY                 VERISOF         02          49         43                                      
+PRINTUL REGENT       WIENIS          05          52         46                                      
+VINCE                BARRETT         09          54         44                                      
+JULIUS               ENDERBY         03          67         45                                      
+JEZEBEL              BALEY           02          66         43                                      
+HAN                  FASTOLFE        11          48         43                                      
+ANTHONY              GERRIGEL        11          47         43                                      
+CHETTER              HUMMIN          08          59         45                                      
+WANDA                SELDON          08          67         45                                      
+CLEON                SEGUNDO         11          61         43                                      
+WILSON               ROTH            12          62         46                                      
+LAVINIA              DEMACHECK       09          60         44                                      
+JANDER               PANELL          09          45         44                                      
+FANYA                FASTOLFE        07          43         41                                      
+GLADIA               DELMARRE        10          56         47                                      
+VASILIA              ALIENA          03          47         45                                      
+LUMEN                FASTOLFE        02          44         43                                      
+SANTIRIX             GREMIONIS       08          61         45                                      
+BRUNDIJ              GREMIONIS       01          56         48                                      
+RUTILAN              HORDER          11          48         43                                      
+RIKAINE              DELMARRE        05          48         46                                      
+ENDOR                LEVANIAN        07          44         41                                      
+HANO                 LINDER          01          50         48                                      
+EMMER                THALUS          06          59         48                                      
+RICHARD              MARTIN          08          53         45                                      
+LINDA                RASH            08          58         45                                      
+AFFRET               SHEKT           01          60         48                                      
+LITTLE MISS          MARTIN          12          58         46                                      
+GEORGE               MARTIN          12          57         46                                      
+KLORISSA             CANTORO         10          53         47                                      
+ISABELLA             ROSETTI         04          49         38                                      
+
+NOMBRE               APELLIDO        MES      ANNOS       PROM                                      
+-------------------- --------------- --- ---------- ----------                                      
+ADA                  ABEDUL          06          59         48                                      
+LIA                  BRESNE          12          47         46                                      
+ISABEL               BORJUES         06          50         48                                      
+ISABELA              BALLASTARO      06          50         48                                      
+JOAQUIN              MONTEBLANCO     10          48         47                                      
+OMAR                 LUBIN           06          61         48                                      
+CLAUDIA              DOLGEDO         06          61         48                                      
+AMAYA                CRATOS          03          50         45                                      
+ROBERTO              BALIREN         03          50         45                                      
+PABLO                SAMIS           10          48         47                                      
+CECILIA              CANZARRA        07          52         41                                      
+HECTOR               SANCO           12          53         46                                      
+VICTOR               DAQUESA         03          50         45                                      
+ANDRES               ARFOLA          04          41         38                                      
+PEDRO                JASOR           04          46         38                                      
+DIEGO                CHAPACO         05          60         46                                      
+ALEJANDRO            ENGALES         05          60         46                                      
+ABEL                 COLVA           10          52         47                                      
+ELENA                VILLABAJA       02          54         43                                      
+ALEXANDRA            AYARA           05          60         46                                      
+HUGO                 LINDER          02          54         43                                      
+MIGUEL               THALUS          05          60         46                                      
+ARIANA               MARTIN          03          59         45                                      
+RAPHAEL              ALFAR           02          54         43                                      
+ELIAS                SHEKT           05          55         46                                      
+GUILLERMO            ALFAR           07          42         41                                      
+ALINA                ABEDUL          01          58         48                                      
+ELISA                ARANA           04          50         38                                      
+IRIS                 BRESNE          06          60         48                                      
+OLIVER               BALLASTARO      02          49         43                                      
+KIRA                 CERPETES        04          50         38                                      
+CELESTE              ZAMBUDO         02          49         43                                      
+JULIANA              LUBIN           12          48         46                                      
+TALIA                CARILO          08          46         45                                      
+WILLIAM              ZORQUI          07          60         41                                      
+AGATHA               HACHEDOSO       03          49         45                                      
+RAMON                CANZARRA        10          56         47                                      
+
+NOMBRE               APELLIDO        MES      ANNOS       PROM                                      
+-------------------- --------------- --- ---------- ----------                                      
+LINDA                WASTON          03          49         45                                      
+
+112 rows selected.
+
+SQL> start 3
+SQL> select nombre, apellido, trunc(months_between(SYSDATE, dianacimiento) /12, 0) annos, subalternos, subalternas
+  2  from (select jefe.nombre, jefe.apellido,  sum(case sub.sexo
+  3  						 when 'M' THEN 1
+  4  						 ELSE 0
+  5  						 END) subalternos,
+  6  					     sum(case sub.sexo
+  7  						 when 'F' THEN 1
+  8  						 ELSE 0
+  9  						 END) subalternas,
+ 10  		 jefe.dianacimiento, jefe.sexo
+ 11  	     from empleados sub
+ 12  	     join empleados jefe on (sub.idjefe = jefe.idemp)
+ 13  	     where sub.idjefe is not null
+ 14  	     group by sub.idjefe, jefe.nombre, jefe.apellido, jefe.dianacimiento, jefe.sexo
+ 15  	     order by dianacimiento desc)
+ 16  where sexo = 'F' and rownum <=3
+ 17  /
+
+NOMBRE               APELLIDO             ANNOS SUBALTERNOS SUBALTERNAS                             
+-------------------- --------------- ---------- ----------- -----------                             
+CAROL                ASARI                   36           4           2                             
+CINDA                MONAY                   40           5           1                             
+POLA                 SHEKT                   43           1           3                             
+
+3 rows selected.
+
+SQL> start 4
+SQL> select departamento, director, subalternos, 'Top Empleados' top
+  2  from (select dep.nombre departamento, dic.nombre director, sub.iddep, count(1) subalternos
+  3  				     from empleados sub
+  4  				     join departamentos dep on (dep.iddep = sub.iddep)
+  5  				     join empleados dic on (dep.iddirector = dic.idemp)
+  6  				     group by sub.iddep, dep.nombre, dic.nombre
+  7  				     order by subalternos desc)
+  8  where rownum <= 1
+  9  UNION
+ 10  select departamento, director, subalternos, 'Top Salarios' top
+ 11  from (select dep.nombre departamento, dic.nombre director, sub.iddep, count(1) subalternos
+ 12  				     from empleados sub
+ 13  				     join departamentos dep on (dep.iddep = sub.iddep)
+ 14  				     join empleados dic on (dep.iddirector = dic.idemp)
+ 15  				     where sub.salario = (select max(salario)
+ 16  						     from empleados)
+ 17  				     group by sub.iddep, dep.nombre, dic.nombre
+ 18  				     order by subalternos desc)
+ 19  where rownum <= 1
+ 20  UNION
+ 21  select departamento, director, subalternos, 'Top antiguo' top
+ 22  from (select dep.nombre departamento, dic.nombre director, sub.iddep, count(1) subalternos
+ 23  				     from empleados sub
+ 24  				     join departamentos dep on (dep.iddep = sub.iddep)
+ 25  				     join empleados dic on (dep.iddirector = dic.idemp)
+ 26  				     where sub.diaingreso = (select min(diaingreso)
+ 27  						     from empleados)
+ 28  				     group by sub.iddep, dep.nombre, dic.nombre
+ 29  				     order by subalternos asc)
+ 30  where rownum <= 1
+ 31  /
+
+DEPARTAMENTO                   DIRECTOR             SUBALTERNOS TOP                                 
+------------------------------ -------------------- ----------- -------------                       
+Presidencia                    HARI                           1 Top Salarios                        
+Presidencia                    HARI                           1 Top antiguo                         
+Ventas                         REGELE                        60 Top Empleados                       
+
+3 rows selected.
+
+SQL> spool off

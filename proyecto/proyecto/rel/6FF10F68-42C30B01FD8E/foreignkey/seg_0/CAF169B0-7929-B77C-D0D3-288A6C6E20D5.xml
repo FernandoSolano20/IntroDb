@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CAF169B0-7929-B77C-D0D3-288A6C6E20D5" containerWithKeyObject="E0843A16-847D-37B9-E10A-9E57E369F218" localFKIndex="F9E7A79D-F383-E8B9-6179-B5FE8E110F15" name="artistas_paises">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>B81425A8-0EDF-A795-6069-04811E61DA51</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>Paises</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>39FDB9F5-A881-0D50-90C1-449D8CC71B41</referredTableID>
+<keyObject>AAA0024E-D28A-A5B6-1D37-40F4FAE56959</keyObject>
+<referredKeyID>AAA0024E-D28A-A5B6-1D37-40F4FAE56959</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

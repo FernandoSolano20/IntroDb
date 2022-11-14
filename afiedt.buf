@@ -1,0 +1,4 @@
+select salario, nombre, idemp, sexo, diaingreso
+from empleados
+where idemp in (select idjefe from empleados where idjefe is not null) and sexo = 'F'
+/

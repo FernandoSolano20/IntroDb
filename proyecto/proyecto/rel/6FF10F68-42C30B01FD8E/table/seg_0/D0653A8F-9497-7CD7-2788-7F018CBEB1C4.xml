@@ -1,0 +1,238 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0653A8F-9497-7CD7-2788-7F018CBEB1C4" name="Descargas">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>0D04E137-861A-0A96-0F41-70FCBE704B87</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="10E533C7-0B7B-9FDF-3250-34B2BCAE6ED1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Llave primaria de descargas]]></commentInRDBMS>
+<generatorID>AA6EA2FE-607A-52AB-F378-3467BEFC139B</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaInicio" id="6D66C45A-4604-3966-88C5-1BB13BA13076">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de inicio de la descarga]]></commentInRDBMS>
+<generatorID>E2694440-5553-9AF3-3828-144959CF3DDC</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>145E2188-B2E9-877A-D4A0-3F4500E283D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>false</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idFormatoMusical" id="00EC9E6C-B3D9-7678-10BA-83B3EC414747">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:54:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato musical]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32BA6B9D-0164-6291-0272-1F61B549901D" referredColumn="09952391-0F92-9096-0DEC-8C1038FF2BE1"/>
+</associations>
+</Column>
+<Column name="idFormatoDocumental" id="E88450E2-5966-D6A1-DB19-55D3B33AA8AF">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:55:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del documental]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="55058263-7C9D-418A-F7BC-420A863AD81C" referredColumn="670259F1-DC85-250B-2BEB-24E3644FB015"/>
+</associations>
+</Column>
+<Column name="idFormatoAudioLibro" id="22B22A9E-F0B5-B5C1-C439-36C33757BC01">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:57:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato de audiolibro]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="629045CE-A2C9-1D4B-2FCF-5E8563D9A78D" referredColumn="2BA4DEC4-E6BF-7F1C-7E16-043DF545ED84"/>
+</associations>
+</Column>
+<Column name="idFormatoPelicula" id="44676F78-9E7D-79CA-82F7-4DF53FF79B73">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:59:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato pelicula]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0120509-676D-6BA7-D957-496868580D5B" referredColumn="7E344B96-0399-2F26-9B50-FA9A241E1F79"/>
+</associations>
+</Column>
+<Column name="idCliente" id="128B86FD-3B3E-9CD1-A793-77F7AA21C1CF">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 08:36:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del cliente]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97E1C46F-DD74-6615-402C-5BCA47957E07" referredColumn="D479B903-EE25-914B-7652-DE9D8607DC03"/>
+</associations>
+</Column>
+<Column name="idFormatoEpisodio" id="349A0822-D436-6788-A722-1848D1267F46">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:21:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato episodio]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF1FC3A2-F35C-C7E2-10C2-42F52261064B" referredColumn="D4636C6B-64A0-7815-FADB-6FD5519AD694"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="87BCEE62-37E2-64BA-C5C7-CEA5599408C3" name="Descargas_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>34EBA672-A2FC-5641-74BC-F74772AE077B</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10E533C7-0B7B-9FDF-3250-34B2BCAE6ED1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58936AEB-B8F3-FF18-E067-C55952C6B12C" name="formato_videomusical">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:54:33 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00EC9E6C-B3D9-7678-10BA-83B3EC414747"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="00F062B7-C018-DF6F-41DC-FA73A6C126F4" name="formato_documentales">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:55:35 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E88450E2-5966-D6A1-DB19-55D3B33AA8AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78CC4505-83ED-4977-D742-F55D506F8A6B" name="formato_audiolibrov1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:57:05 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22B22A9E-F0B5-B5C1-C439-36C33757BC01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49934361-6478-7966-3244-E7AD9F295BEF" name="formato_peliculav1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:59:14 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44676F78-9E7D-79CA-82F7-4DF53FF79B73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3AC7A95-E8B3-2764-477C-08E0F16D74C2" name="Descargas_Clientes_FK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 08:36:31 UTC</createdTime>
+<generatorID>09CF1483-AEDD-1EE8-98C1-BDE050B58765</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="128B86FD-3B3E-9CD1-A793-77F7AA21C1CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86A4D271-FDEE-26B6-6741-CBC175BEDBA2" name="Descargas_FormatoEpisodio_FK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 09:21:25 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="349A0822-D436-6788-A722-1848D1267F46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

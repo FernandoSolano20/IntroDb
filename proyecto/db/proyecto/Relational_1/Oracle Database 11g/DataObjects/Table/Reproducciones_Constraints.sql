@@ -1,0 +1,1 @@
+ALTER TABLE reproducciones ADD CONSTRAINT reproducciones_pk PRIMARY KEY ( id );

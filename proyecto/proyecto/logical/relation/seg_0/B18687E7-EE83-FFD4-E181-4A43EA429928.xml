@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FormatoVideoMusical VideosMusicales FK" directorySegmentName="seg_0" id="B18687E7-EE83-FFD4-E181-4A43EA429928">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:59:37 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>38AEE3D3-5C5C-DB83-5A78-DB9864DE2C11</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0D7984B7-8DC0-6F49-731D-447CB0E2B8D0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D44FA3DF-6840-0F89-0EC8-E861555BBABD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

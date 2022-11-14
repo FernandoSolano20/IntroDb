@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="535223FF-3096-E492-8A99-2BE63619BC88" name="Cliente_FormaDePago">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contienen las formas de pago de los clientes]]></commentInRDBMS>
+<generatorID>24488331-8E01-44E1-5099-D4BC45E9F52B</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCliente" id="21893A2D-035D-B603-A7FC-57BD9A9ED953">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del cliente]]></commentInRDBMS>
+<generatorID>0C6CB738-E641-0700-3140-05CEB5769AB8</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1C55802B-E0D2-C163-2B9A-90A3F6D9433F" referredColumn="D479B903-EE25-914B-7652-DE9D8607DC03"/>
+</associations>
+</Column>
+<Column name="tipoPago" id="6611232F-7516-1634-F042-56F2473FBDF0">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del tipo de pago]]></commentInRDBMS>
+<generatorID>D61F58BB-2CE7-C080-97F6-9DBA9D9F8AEF</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<domain>DA62A35A-EA73-182D-08A8-F166847DC236</domain>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="70AE483C-778F-27E3-FD84-37964B9D84A3" referredColumn="F13FED3E-699B-6151-0552-34A87C2DEBBA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9DF16D6-5AAE-3C2A-43A1-520A90D68C4C" name="Cliente_FormaDePago_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>C52A3677-7385-DB18-D3DC-03E4B3899B11</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21893A2D-035D-B603-A7FC-57BD9A9ED953"/>
+<colUsage columnID="6611232F-7516-1634-F042-56F2473FBDF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="97038698-F08D-F83D-9DE2-0D7D3ABED1B7" name="cliente_formasdepago2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>7F6E3535-54E1-B7BB-2484-9D92D2BFEE29</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21893A2D-035D-B603-A7FC-57BD9A9ED953"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="95A5D662-E604-A13E-FBF3-2267DCD4A269" name="cliente_formasdepago1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>2829F87B-EB7B-0499-2174-A3C8F10E7ED8</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6611232F-7516-1634-F042-56F2473FBDF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

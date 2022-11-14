@@ -1,0 +1,1 @@
+ALTER TABLE tiposartistas ADD CONSTRAINT tiposartistas_pk PRIMARY KEY ( tipo );

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2A745CA4-EC6F-2925-032F-14B9ACF30D56" name="FormatoEpisodio">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:11:54 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Formatos formato" id="49349791-2675-0B23-4658-43343F28B434">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:12:42 UTC</createdTime>
+<generatorID>60E8F1B7-2D7F-C027-03DC-B3ACA5185CBB</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>11267F70-B753-8221-1403-76F79B4BC5EC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="F64B68DA-0A98-4E89-9635-4F6E585A508D">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 10:03:22 UTC</createdTime>
+<generatorID>41922B89-8FC1-317E-1400-E95AE320893C</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>56C2172F-9502-0D43-4F13-DD008C1CA934</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B54D7B77-91B9-B2DC-0465-AAD0BC317E25" name="FormatoSerie_Formatos_formato_Series_id_UN">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:24:23 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>49349791-2675-0B23-4658-43343F28B434</attributeRef>
+<attributeRef>F64B68DA-0A98-4E89-9635-4F6E585A508D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Cliente FormaDePago FormasDePago FK" directorySegmentName="seg_0" id="2829F87B-EB7B-0499-2174-A3C8F10E7ED8">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:44:45 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>4A93098A-D16B-7900-899B-983927B15814</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>533D9A3E-E9C7-A2CD-EA16-CC15693ABC40</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>24488331-8E01-44E1-5099-D4BC45E9F52B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

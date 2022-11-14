@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="80FF8147-FBC4-CAA2-0F52-28185231DED8" name="FormatoAudioLibro">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:01:22 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Formatos formato" id="326A5822-0347-AEF1-75B3-D0AC439E323B">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:01:44 UTC</createdTime>
+<generatorID>D8F7DE3E-4692-8693-C657-FEC62B57D259</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>11267F70-B753-8221-1403-76F79B4BC5EC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AudioLibro id" id="090F8B9A-F563-33A7-B84A-B96CB650382B">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:01:51 UTC</createdTime>
+<generatorID>5FD3A3B5-DD0F-5E00-17AC-C34DB4B29733</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>A3370B60-212A-8D8E-B381-FA0D7851490B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A96ACC65-E55B-4C8D-01B8-4EECF203FE94" name="FormatoAudioLibro_AudioLibro_id_Formatos_formato_UN">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:22:30 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>090F8B9A-F563-33A7-B84A-B96CB650382B</attributeRef>
+<attributeRef>326A5822-0347-AEF1-75B3-D0AC439E323B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

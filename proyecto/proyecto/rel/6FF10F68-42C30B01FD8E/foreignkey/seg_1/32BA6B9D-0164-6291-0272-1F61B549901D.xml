@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="32BA6B9D-0164-6291-0272-1F61B549901D" containerWithKeyObject="D0653A8F-9497-7CD7-2788-7F018CBEB1C4" localFKIndex="58936AEB-B8F3-FF18-E067-C55952C6B12C" name="formato_videomusical">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:54:33 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>FormatoVideoMusical</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BF27908E-1EF4-ADBD-6109-04059278A13F</referredTableID>
+<keyObject>987D0F1A-EE87-BC45-86DD-6DDB331B58B5</keyObject>
+<referredKeyID>987D0F1A-EE87-BC45-86DD-6DDB331B58B5</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8CAB9043-7D15-9CFE-FD74-C4630482C27D" name="FormatoDocumentales">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:12:57 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="formato" id="25AE541F-C972-7B9E-A8A8-BA34D86788A0">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:58:34 UTC</createdTime>
+<generatorID>287D1E04-D39B-EF34-9294-066F60748D2F</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>11267F70-B753-8221-1403-76F79B4BC5EC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="B3473B62-799B-FFF9-E3C7-A3B46F19B4DB">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:58:43 UTC</createdTime>
+<generatorID>55239B24-9504-D762-B40C-4E3C2ED143CA</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>97413058-BCFB-D0BA-E933-3560922DFBE6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C4F8956C-7CBB-74EF-C3F9-842C8CC99B89" name="FormatoDocumentales_Documentales_id_Formatos_formato_UN">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:15:53 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>25AE541F-C972-7B9E-A8A8-BA34D86788A0</attributeRef>
+<attributeRef>B3473B62-799B-FFF9-E3C7-A3B46F19B4DB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

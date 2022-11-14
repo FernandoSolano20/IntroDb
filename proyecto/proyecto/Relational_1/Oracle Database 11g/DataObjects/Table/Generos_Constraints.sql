@@ -1,0 +1,1 @@
+ALTER TABLE generos ADD CONSTRAINT generos_pk PRIMARY KEY ( tipo );

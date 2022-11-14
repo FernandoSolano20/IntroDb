@@ -1,0 +1,1 @@
+ALTER TABLE sagas ADD CONSTRAINT sagas_pk PRIMARY KEY ( id );

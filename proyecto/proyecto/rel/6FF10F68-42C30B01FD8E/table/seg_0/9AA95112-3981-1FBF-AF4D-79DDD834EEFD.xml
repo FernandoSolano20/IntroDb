@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9AA95112-3981-1FBF-AF4D-79DDD834EEFD" name="ArtistaTipoArtista">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contiene artistas po tipo de artistas]]></commentInRDBMS>
+<generatorID>7A808B62-D33E-C45D-7064-732C9BDADE71</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idArtista" id="5F4641F0-97CE-2593-B69D-2557F66FCEAE">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del artista]]></commentInRDBMS>
+<generatorID>1F575FDC-F550-7085-B72C-72F27DD0DDF0</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8AA444D9-912C-C7CE-4CAC-72068B4D2A0C" referredColumn="9635EE82-C6B7-B0A5-5E4B-8BE0AA45A418"/>
+</associations>
+</Column>
+<Column name="idtipoArtista" id="D5DA8AA2-F7D2-01E9-9219-A4CCB6C63B5A">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del tipo de artista]]></commentInRDBMS>
+<generatorID>254B594F-38C5-1F7D-18AA-EEB35B5BA6EC</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<domain>DA62A35A-EA73-182D-08A8-F166847DC236</domain>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="471BB13B-E5AB-9AB7-8896-5046C87861EF" referredColumn="40BA1F90-165A-3BC1-C7D9-A322D301D342"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="197C323D-826E-0B3D-4376-470ECFEDD631" name="ArtistaTipoArtista_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>E0A8401F-BA4C-A98A-1889-343FF1C889B9</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F4641F0-97CE-2593-B69D-2557F66FCEAE"/>
+<colUsage columnID="D5DA8AA2-F7D2-01E9-9219-A4CCB6C63B5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B98B413-6C38-F9D9-C1B6-36AD9E66DA2F" name="artistaTipo_Artista">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>EE335EF0-82C0-63E2-EDAB-783C20536429</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F4641F0-97CE-2593-B69D-2557F66FCEAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="073FCC27-7BF1-ECA4-64DE-FD822562DBBB" name="artistaTipo_Artista2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>2778689D-6C00-FA33-8C44-0CCE08C85625</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5DA8AA2-F7D2-01E9-9219-A4CCB6C63B5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

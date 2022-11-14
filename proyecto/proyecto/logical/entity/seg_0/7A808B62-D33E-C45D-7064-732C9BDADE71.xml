@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7A808B62-D33E-C45D-7064-732C9BDADE71" name="ArtistaTipoArtista">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:53:57 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Artistas id" id="1F575FDC-F550-7085-B72C-72F27DD0DDF0">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:54:19 UTC</createdTime>
+<generatorID>EE335EF0-82C0-63E2-EDAB-783C20536429</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>A2785FD8-3FB6-82A5-7667-92A02C33AA1C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TiposArtistas tipo" id="254B594F-38C5-1F7D-18AA-EEB35B5BA6EC">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 01:54:36 UTC</createdTime>
+<generatorID>2778689D-6C00-FA33-8C44-0CCE08C85625</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>77927808-BBFD-AF8C-9EF9-8C25ED2CF0CB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E0A8401F-BA4C-A98A-1889-343FF1C889B9" name="ArtistaTipoArtista PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:27:38 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1F575FDC-F550-7085-B72C-72F27DD0DDF0</attributeRef>
+<attributeRef>254B594F-38C5-1F7D-18AA-EEB35B5BA6EC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

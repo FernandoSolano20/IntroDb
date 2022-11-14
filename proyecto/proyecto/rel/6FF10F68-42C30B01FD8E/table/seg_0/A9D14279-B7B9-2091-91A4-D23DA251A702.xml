@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A9D14279-B7B9-2091-91A4-D23DA251A702" name="FormatoDocumentales">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contiene los tipos de formato de los documentales]]></commentInRDBMS>
+<generatorID>8CAB9043-7D15-9CFE-FD74-C4630482C27D</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="670259F1-DC85-250B-2BEB-24E3644FB015">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 23:01:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Llave primaria de formato documentales]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="idFormato" id="8D0B7466-2E82-320D-9237-A94273425B5E">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato]]></commentInRDBMS>
+<generatorID>25AE541F-C972-7B9E-A8A8-BA34D86788A0</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<domain>9E65350E-0380-5240-DB2E-E05322D46046</domain>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A3618D0-C60B-D607-C31E-23216F416873" referredColumn="EF0EF921-5A52-42DE-0C7B-36C531E21C0C"/>
+</associations>
+</Column>
+<Column name="idDocumental" id="3D680692-34A9-E264-C52A-4BB418723F55">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del documental]]></commentInRDBMS>
+<generatorID>B3473B62-799B-FFF9-E3C7-A3B46F19B4DB</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0BF9AF1-C93D-B2CF-273A-9E3A7ADF1EA3" referredColumn="B138051D-E47B-D124-B129-E0A32EA5CCF5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72CCFA75-1AF3-D113-7B5C-24786AC37BEA" name="FormatoDocumentales_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="670259F1-DC85-250B-2BEB-24E3644FB015"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0E2404FF-B91A-E7B6-1EDB-130D1DAA96BD" name="FormatosDocumental">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>C4F8956C-7CBB-74EF-C3F9-842C8CC99B89</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D0B7466-2E82-320D-9237-A94273425B5E"/>
+<colUsage columnID="3D680692-34A9-E264-C52A-4BB418723F55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="720EB80A-1A7F-A814-C060-5532244BCB27" name="documentales_formato2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>287D1E04-D39B-EF34-9294-066F60748D2F</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D0B7466-2E82-320D-9237-A94273425B5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF84527A-6EF3-AA18-9023-CD305DBE7C0D" name="documentales_formato">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>55239B24-9504-D762-B40C-4E3C2ED143CA</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D680692-34A9-E264-C52A-4BB418723F55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

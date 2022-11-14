@@ -1,0 +1,1 @@
+ALTER TABLE clasificaciones ADD CONSTRAINT clasificaciones_pk PRIMARY KEY ( tipoclasificacion );

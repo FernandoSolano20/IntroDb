@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Temporadas Series FK" directorySegmentName="seg_0" id="39FA6BA7-3181-FFED-4ACF-01C629FF54A5">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:14:15 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<sourcePk>69742A04-7A2E-B518-3FDA-108E862AE3C0</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2025F213-6511-3058-ADAA-D389E16E5FBF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EED93956-B04C-6F89-71D6-459121C41EA1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

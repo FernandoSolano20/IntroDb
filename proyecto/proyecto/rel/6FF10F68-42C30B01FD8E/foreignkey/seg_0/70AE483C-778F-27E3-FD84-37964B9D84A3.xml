@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="70AE483C-778F-27E3-FD84-37964B9D84A3" containerWithKeyObject="535223FF-3096-E492-8A99-2BE63619BC88" localFKIndex="95A5D662-E604-A13E-FBF3-2267DCD4A269" name="cliente_formasdepago1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>2829F87B-EB7B-0499-2174-A3C8F10E7ED8</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>FormasDePago</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AC72A091-DBD4-B578-A5EE-1545CD5B066F</referredTableID>
+<keyObject>0505C9E0-F059-4608-F9F1-E98E595565F8</keyObject>
+<referredKeyID>0505C9E0-F059-4608-F9F1-E98E595565F8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>tipoPago</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

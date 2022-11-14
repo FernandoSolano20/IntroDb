@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="612697FB-3926-5911-3F4B-567B2BABD3AE" containerWithKeyObject="0BE281E5-F973-0E23-BCD8-97E9A0234F58" localFKIndex="5FAFF73E-2184-037F-EC42-E8A153272114" name="repartoserie_serie">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>B98481E6-47B8-41CC-9DAC-6B78BDCC564E</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>Series</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>44919CE6-300A-8E61-9E00-02FA0F830ED1</referredTableID>
+<keyObject>EA4232B7-54ED-BE29-8F2D-2122644795A4</keyObject>
+<referredKeyID>EA4232B7-54ED-BE29-8F2D-2122644795A4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

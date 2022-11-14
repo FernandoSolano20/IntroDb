@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0BE281E5-F973-0E23-BCD8-97E9A0234F58" name="RepartoSerie">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla de reparto de la serie]]></commentInRDBMS>
+<generatorID>EC62B094-7EC3-6E7B-D384-DBD5804AFE09</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idSerie" id="D2FA30E1-9F6C-BA7E-BF2B-B852A48432BE">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion de la serie]]></commentInRDBMS>
+<generatorID>4ABFCEEF-6185-D8C8-E112-01C5885F00CE</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="612697FB-3926-5911-3F4B-567B2BABD3AE" referredColumn="BE2FEE8C-1C08-4949-905A-70C136778636"/>
+</associations>
+</Column>
+<Column name="idArtista" id="6DC5C287-EAFC-5EB1-0AA3-EB8F6D1EC63E">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del artista]]></commentInRDBMS>
+<generatorID>4655584A-DB24-79CB-8C6C-DFC812CEA959</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="172544FF-FA79-6213-26B8-5F0C23DE45C1" referredColumn="9635EE82-C6B7-B0A5-5E4B-8BE0AA45A418"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53112EFD-12B2-1E18-337E-311A60CB66FF" name="RepartoSerie_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>CC966B9E-70F7-2EC1-1000-E163C7B8FDA9</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2FA30E1-9F6C-BA7E-BF2B-B852A48432BE"/>
+<colUsage columnID="6DC5C287-EAFC-5EB1-0AA3-EB8F6D1EC63E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5ECF6EBE-0C53-AD0A-5316-C701F5BD2AD7" name="repartoserie_artista">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>EC234122-C182-164B-A409-3C868AB2E5CB</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DC5C287-EAFC-5EB1-0AA3-EB8F6D1EC63E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5FAFF73E-2184-037F-EC42-E8A153272114" name="repartoserie_serie">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>B98481E6-47B8-41CC-9DAC-6B78BDCC564E</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2FA30E1-9F6C-BA7E-BF2B-B852A48432BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

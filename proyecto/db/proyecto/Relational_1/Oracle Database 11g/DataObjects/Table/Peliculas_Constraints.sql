@@ -1,0 +1,1 @@
+ALTER TABLE peliculas ADD CONSTRAINT peliculas_pk PRIMARY KEY ( id );

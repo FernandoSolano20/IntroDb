@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="DF303C0E-24F6-5F15-CDB8-C4AC4CA98530" containerWithKeyObject="59B2E4ED-EA39-6440-B702-9CC13F4F1AF0" localFKIndex="B8439636-1FF6-4A4F-E064-7B5C88FFA651" name="reproducciones_documentales">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>FC9C2F8C-D47E-B9F8-0831-960C2FF0BBCB</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<referredTableLongName>Documentales</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4A3D7021-82EE-14A4-A8BA-A243EBAE3D6A</referredTableID>
+<keyObject>8A3D406E-C636-CEC2-EED9-A2C0BBD0A46C</keyObject>
+<referredKeyID>8A3D406E-C636-CEC2-EED9-A2C0BBD0A46C</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,212 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="371B5092-EB28-798A-56DF-F885D62FCC77" name="Peliculas">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:00:41 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="077DABA3-F9FE-C799-7B11-FBFB351D0361">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:00:49 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titulo" id="322D83BF-3254-F5A5-2887-DDDE55A71E8C">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:01:12 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="anno" id="A4E93078-DD0C-8921-9932-C853B61D8298">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:01:31 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estudio" id="932BFFEF-7873-1617-3903-C631C4E8518D">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:02:06 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora" id="DAA507B7-D3AB-5A46-3CA5-074CC8D79697">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:02:46 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="minuto" id="9710B60A-6F7A-2FF9-8A74-0CFE4C1A894D">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:19:28 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo" id="EA550EE0-BC49-FF1E-8EF8-2C21895E07BD">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:19:44 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Paises id" id="7F8C3CB9-FC47-8936-FFE1-36D2653CC6B8">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:21:27 UTC</createdTime>
+<generatorID>A94CCE58-22D0-329F-18D4-6CB692F779F6</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>3EFB6F9D-6996-80BC-91A1-AABF794E00A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Artistas id" id="55DF6C94-2B37-A56E-9BA2-F732EEC985B3">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:28:01 UTC</createdTime>
+<generatorID>280CBC08-12CA-056A-5574-47DE615E7C67</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>A2785FD8-3FB6-82A5-7667-92A02C33AA1C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Clasificaciones tipoClasificacion" id="04437D68-9550-318F-4755-D6272E624BA3">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:32:39 UTC</createdTime>
+<generatorID>47AB6B9F-A15B-DACA-5EDE-DD2069445278</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>F7511642-6F4D-840A-6A77-CD497D40C62A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Sagas id" id="3B393F47-847B-7D5E-B933-772438F8AB0B">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 03:24:44 UTC</createdTime>
+<generatorID>28C0AA8D-BCB8-214F-7FCC-8EC12D09D0CC</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>90E94F4B-DD89-1CE8-A7A5-A969320439E9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="1AF285B2-FEC4-DCB0-AC0D-16CAB1CFAAAD">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 07:20:00 UTC</createdTime>
+<generatorID>06887AD9-FFA2-38F6-A087-F0696E6707EB</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>140E9EA8-E6FC-7841-CB05-8200CA205253</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo1" id="55A4CB09-8EBF-AC3D-7E1B-996E979FC816">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 23:31:26 UTC</createdTime>
+<generatorID>F1A51D7F-4997-8D06-E801-F8FB4473B51D</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<referedAttribute>140E9EA8-E6FC-7841-CB05-8200CA205253</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="92D29708-A357-EA54-D358-941A982F03DB" name="Peliculas PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 02:00:52 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>077DABA3-F9FE-C799-7B11-FBFB351D0361</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

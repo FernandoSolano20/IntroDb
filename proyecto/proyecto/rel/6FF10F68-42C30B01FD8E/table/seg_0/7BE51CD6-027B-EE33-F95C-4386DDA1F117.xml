@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7BE51CD6-027B-EE33-F95C-4386DDA1F117" name="FormatoPelicula">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contiene los formatos de la pelicula]]></commentInRDBMS>
+<generatorID>DBE15D84-E8DB-5B35-BF9D-0B55F0EEF77D</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7E344B96-0399-2F26-9B50-FA9A241E1F79">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Llave primaria del formato de pelicula]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="idPelicula" id="FD98AD72-D3BC-F7F7-95B3-31433055245E">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion de la pelicula]]></commentInRDBMS>
+<generatorID>45292729-9CF0-7CEE-9F5B-004B15200884</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8062118A-8BB1-8458-F390-524BD07C9733" referredColumn="4DBD296C-1FE1-450F-F178-02B84D38A68F"/>
+</associations>
+</Column>
+<Column name="idformato" id="FEACD621-77AE-FF57-A97C-EAF0F91787BC">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato]]></commentInRDBMS>
+<generatorID>9E44FD65-2898-9411-C87A-DDD5DA6D6C85</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<domain>9E65350E-0380-5240-DB2E-E05322D46046</domain>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="858FFF08-2E3C-20D1-EED4-E7D7B2796637" referredColumn="EF0EF921-5A52-42DE-0C7B-36C531E21C0C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E54F524D-91BD-89C5-B406-93BF3DBB7481" name="FormatoPelicula_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="7E344B96-0399-2F26-9B50-FA9A241E1F79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B31E1AF-E9FF-2289-86DF-0861CB85597A" name="Formatos_Peliculas">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>61B38644-58B7-8E7D-3E57-12F8F0524110</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEACD621-77AE-FF57-A97C-EAF0F91787BC"/>
+<colUsage columnID="FD98AD72-D3BC-F7F7-95B3-31433055245E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98C7DFF7-AD0D-C2D7-0076-A142685D5A60" name="formato_pelicula2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>6412B70C-05BB-4EC0-F5F4-D03C466A6FF8</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEACD621-77AE-FF57-A97C-EAF0F91787BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6DBA6C5-22E3-BDB8-AB35-72D336214232" name="formato_pelicula">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>DD6FCED8-6DF8-7722-8DBF-23B03C8DA209</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD98AD72-D3BC-F7F7-95B3-31433055245E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

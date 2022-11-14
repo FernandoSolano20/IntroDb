@@ -1,0 +1,1 @@
+ALTER TABLE temporadas ADD CONSTRAINT temporadas_pk PRIMARY KEY ( id );

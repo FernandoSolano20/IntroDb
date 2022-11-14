@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Descargas FormatoDocumentales FK" directorySegmentName="seg_0" id="A7506160-9DB2-A65B-723F-8C0FFE905226">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-02 04:16:28 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<engineerTo>
+<item key="6FF10F68-C2BD-4FD2-07E2-42C30B01FD8E" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8CAB9043-7D15-9CFE-FD74-C4630482C27D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0D04E137-861A-0A96-0F41-70FCBE704B87</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,1 @@
+ALTER TABLE formasdepago ADD CONSTRAINT formasdepago_pk PRIMARY KEY ( tipopago );

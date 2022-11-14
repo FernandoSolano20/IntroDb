@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="proyecto_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10000" id="10D85009-6AD3-2AC7-9086-D63E7C64CE93">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>10000</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="145E2188-B2E9-877A-D4A0-3F4500E283D8">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_40" id="1E579A9F-13B4-0519-3AA8-22A62D1D71A7">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>40</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_0_0_0" id="3CD16A1B-1162-3627-9ED2-43E22E9A421E">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Datetime_0_0_0" id="4699E915-0A37-03EE-6A85-B648D9884B66">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_2" id="63C61E5F-52FD-46A4-1602-BC8748546834">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_3" id="798A3F87-FD54-4ED2-F511-3F031FF3D41A">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>3</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_1" id="7D5589DC-F033-4963-C11B-C367EB5C4ACA">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_300" id="9548C265-A7CA-1F6F-87C7-E860386EF6ED">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>300</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10" id="9E65350E-0380-5240-DB2E-E05322D46046">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>10</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="BAD16F6E-3975-BCCA-BC68-A6532A799A42">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>20</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100" id="C504E4DA-38B5-257F-F909-984BDA9E94A1">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>100</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_2" id="D947CA97-75C9-747B-0DB9-0FB482F8BDB9">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT025</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_250" id="DA62A35A-EA73-182D-08A8-F166847DC236">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>250</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Boolean_0_0_1" id="F9D09711-5CD9-4078-6339-569B2D046C74">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT006</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-17 20:08:47 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>proyecto_Domains</fileName>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FBF09BB7-D2E0-5CAC-79FE-3C6A903F4A52" name="FormatoAudioLibro">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que contiene los formatos de los audiolibros]]></commentInRDBMS>
+<generatorID>80FF8147-FBC4-CAA2-0F52-28185231DED8</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2BA4DEC4-E6BF-7F1C-7E16-043DF545ED84">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Llave primaria de formato de audiolibro]]></commentInRDBMS>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CD16A1B-1162-3627-9ED2-43E22E9A421E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="formato" id="CBE302C9-AFFC-4CDF-F43A-87480B8A226C">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del formato]]></commentInRDBMS>
+<generatorID>326A5822-0347-AEF1-75B3-D0AC439E323B</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<domain>9E65350E-0380-5240-DB2E-E05322D46046</domain>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76017BEE-3931-AFF7-3EB0-7AD3C090AFE1" referredColumn="EF0EF921-5A52-42DE-0C7B-36C531E21C0C"/>
+</associations>
+</Column>
+<Column name="idAudioLibro" id="48692E7D-464B-B1D4-6A83-4511D2D2205C">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Informacion del audiolibro]]></commentInRDBMS>
+<generatorID>090F8B9A-F563-33A7-B84A-B96CB650382B</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>FB3FF6FF-2340-0D8D-0DE2-501DAC79D4DB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<containsPII>true</containsPII>
+<containsSensitiveInformation>false</containsSensitiveInformation>
+<maskingType>PARTIAL</maskingType>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C57B90B9-EADD-1111-56AD-A086066D7596" referredColumn="37D9E4BA-3A06-1887-7FDA-FCEE1A261AE3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FE6C1F5B-8350-8B24-4C3D-38D1052594E2" name="FormatoAudioLibro_PK">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<ownerDesignName>proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="2BA4DEC4-E6BF-7F1C-7E16-043DF545ED84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BDDF9D74-9FDB-C90B-02ED-F27AD1072194" name="AudioLibroFormatos_formato">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>A96ACC65-E55B-4C8D-01B8-4EECF203FE94</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48692E7D-464B-B1D4-6A83-4511D2D2205C"/>
+<colUsage columnID="CBE302C9-AFFC-4CDF-F43A-87480B8A226C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A01A227-DA68-3C08-14F8-653EEC1E75BD" name="formato_audiolibro">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>5FD3A3B5-DD0F-5E00-17AC-C34DB4B29733</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48692E7D-464B-B1D4-6A83-4511D2D2205C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B67C171F-7206-7C03-1326-B194D9C0D80E" name="formato_audiolibro2">
+<createdBy>fersolano</createdBy>
+<createdTime>2020-08-15 22:59:29 UTC</createdTime>
+<generatorID>D8F7DE3E-4692-8693-C657-FEC62B57D259</generatorID>
+<ownerDesignName>proyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBE302C9-AFFC-4CDF-F43A-87480B8A226C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
